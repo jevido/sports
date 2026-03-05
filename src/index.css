@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SportSwipe - Dark & Bold Athletic Design */
+
+@layer base {
+  :root {
+    /* Dark core */
+    --background: 225 25% 8%;
+    --foreground: 210 20% 95%;
+
+    /* Neon Primary - Electric Cyan */
+    --primary: 185 100% 50%;
+    --primary-foreground: 225 25% 8%;
+    --primary-glow: 195 100% 60%;
+
+    /* Secondary - Hot Magenta */
+    --secondary: 320 90% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Accent - Lime Punch */
+    --accent: 85 90% 55%;
+    --accent-foreground: 225 25% 8%;
+
+    /* Card System */
+    --card: 225 20% 12%;
+    --card-foreground: 210 20% 95%;
+    --card-shadow: 0 0% 0%;
+
+    /* UI Elements */
+    --muted: 225 15% 18%;
+    --muted-foreground: 220 10% 55%;
+    --border: 225 15% 20%;
+    --input: 225 15% 15%;
+    --ring: 185 100% 50%;
+
+    /* Destructive */
+    --destructive: 0 85% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Popover */
+    --popover: 225 20% 12%;
+    --popover-foreground: 210 20% 95%;
+
+    /* Neon surface */
+    --neon-surface: 225 20% 15%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(225 25% 8%), hsl(260 30% 15%), hsl(225 25% 8%));
+    --gradient-card: linear-gradient(145deg, hsl(225 20% 14%), hsl(225 20% 10%));
+    --gradient-accept: linear-gradient(135deg, hsl(85 90% 55%), hsl(140 80% 45%));
+    --gradient-reject: linear-gradient(135deg, hsl(0 85% 55%), hsl(340 80% 50%));
+    --gradient-primary: linear-gradient(135deg, hsl(185 100% 50%), hsl(195 100% 60%));
+    --gradient-neon: linear-gradient(135deg, hsl(185 100% 50%), hsl(320 90% 60%));
+    --gradient-quiz: linear-gradient(135deg, hsl(260 80% 50%), hsl(320 90% 60%));
+
+    /* Shadows */
+    --shadow-card: 0 4px 30px -4px hsl(0 0% 0% / 0.5);
+    --shadow-card-hover: 0 8px 40px -4px hsl(185 100% 50% / 0.2);
+    --shadow-glow: 0 0 40px hsl(185 100% 50% / 0.3);
+    --shadow-neon: 0 0 20px hsl(185 100% 50% / 0.4);
+
+    /* Timing */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 225 25% 10%;
+    --sidebar-foreground: 210 20% 95%;
+    --sidebar-primary: 185 100% 50%;
+    --sidebar-primary-foreground: 225 25% 8%;
+    --sidebar-accent: 225 15% 18%;
+    --sidebar-accent-foreground: 210 20% 95%;
+    --sidebar-border: 225 15% 20%;
+    --sidebar-ring: 185 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Neon text glow utility */
+.text-glow {
+  text-shadow: 0 0 20px hsl(185 100% 50% / 0.5), 0 0 40px hsl(185 100% 50% / 0.3);
+}
+
+.text-glow-magenta {
+  text-shadow: 0 0 20px hsl(320 90% 60% / 0.5), 0 0 40px hsl(320 90% 60% / 0.3);
+}

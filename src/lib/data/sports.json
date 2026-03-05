@@ -1,0 +1,2263 @@
+[
+  {
+    "id": "1",
+    "name": "Basketball Session",
+    "imageKey": "basketball",
+    "location": "Central Park Courts",
+    "distance": "0.6 mi",
+    "participants": 1,
+    "maxParticipants": 3,
+    "time": "Today 18:00",
+    "description": "Join a basketball meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Basketball Athletic Club",
+        "location": "Central Park Courts - Zone 2",
+        "distance": "0.8 mi",
+        "time": "Today 18:00"
+      },
+      {
+        "clubName": "Basketball Sports Center",
+        "location": "Central Park Courts - Zone 3",
+        "distance": "1.0 mi",
+        "time": "Today 19:00"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Soccer Session",
+    "imageKey": "soccer",
+    "location": "Riverside Sports Complex",
+    "distance": "0.8 mi",
+    "participants": 2,
+    "maxParticipants": 5,
+    "time": "Today 19:00",
+    "description": "Join a soccer meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "3",
+    "name": "Tennis Session",
+    "imageKey": "tennis",
+    "location": "Metro Athletic Club",
+    "distance": "1.0 mi",
+    "participants": 3,
+    "maxParticipants": 7,
+    "time": "Tomorrow 18:00",
+    "description": "Join a tennis meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "4",
+    "name": "Swimming Session",
+    "imageKey": "swimming",
+    "location": "Downtown Rec Center",
+    "distance": "1.2 mi",
+    "participants": 4,
+    "maxParticipants": 9,
+    "time": "Tomorrow 19:00",
+    "description": "Join a swimming meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Swimming Training Grounds",
+        "location": "Downtown Rec Center - Zone 2",
+        "distance": "1.4 mi",
+        "time": "Tomorrow 20:00"
+      },
+      {
+        "clubName": "Swimming Arena",
+        "location": "Downtown Rec Center - Zone 3",
+        "distance": "1.6 mi",
+        "time": "Saturday 10:00"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Capoeira Session",
+    "imageKey": "basketball",
+    "location": "Lakeside Arena",
+    "distance": "1.5 mi",
+    "participants": 5,
+    "maxParticipants": 11,
+    "time": "Saturday 10:00",
+    "description": "Join a capoeira meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "6",
+    "name": "Volleyball Session",
+    "imageKey": "soccer",
+    "location": "Eastside Community Field",
+    "distance": "1.8 mi",
+    "participants": 6,
+    "maxParticipants": 13,
+    "time": "Sunday 09:00",
+    "description": "Join a volleyball meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": [
+      {
+        "clubName": "Volleyball Athletic Club",
+        "location": "Eastside Community Field - Zone 2",
+        "distance": "2.0 mi",
+        "time": "Sunday 09:00"
+      },
+      {
+        "clubName": "Volleyball Sports Center",
+        "location": "Eastside Community Field - Zone 3",
+        "distance": "2.2 mi",
+        "time": "Today 18:00"
+      },
+      {
+        "clubName": "Volleyball Community Hub",
+        "location": "Eastside Community Field - Zone 4",
+        "distance": "2.4 mi",
+        "time": "Today 19:00"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Baseball Session",
+    "imageKey": "tennis",
+    "location": "West End Gym",
+    "distance": "2.1 mi",
+    "participants": 7,
+    "maxParticipants": 15,
+    "time": "Weeknights 20:00",
+    "description": "Join a baseball meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Baseball Sports Center",
+        "location": "West End Gym - Zone 2",
+        "distance": "2.3 mi",
+        "time": "Today 18:00"
+      },
+      {
+        "clubName": "Baseball Community Hub",
+        "location": "West End Gym - Zone 3",
+        "distance": "2.5 mi",
+        "time": "Today 19:00"
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "name": "Softball Session",
+    "imageKey": "swimming",
+    "location": "Harbor Activity Hub",
+    "distance": "2.4 mi",
+    "participants": 8,
+    "maxParticipants": 17,
+    "time": "Daily 06:00",
+    "description": "Join a softball meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "9",
+    "name": "Rugby Session",
+    "imageKey": "basketball",
+    "location": "Northview Training Grounds",
+    "distance": "0.6 mi",
+    "participants": 9,
+    "maxParticipants": 19,
+    "time": "Today 18:00",
+    "description": "Join a rugby meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "10",
+    "name": "Cricket Session",
+    "imageKey": "soccer",
+    "location": "Southside Fitness Hall",
+    "distance": "0.8 mi",
+    "participants": 10,
+    "maxParticipants": 21,
+    "time": "Today 19:00",
+    "description": "Join a cricket meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Cricket Arena",
+        "location": "Southside Fitness Hall - Zone 2",
+        "distance": "1.0 mi",
+        "time": "Tomorrow 20:00"
+      },
+      {
+        "clubName": "Cricket Athletic Club",
+        "location": "Southside Fitness Hall - Zone 3",
+        "distance": "1.2 mi",
+        "time": "Saturday 10:00"
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "name": "Field Hockey Session",
+    "imageKey": "tennis",
+    "location": "Central Park Courts",
+    "distance": "1.0 mi",
+    "participants": 11,
+    "maxParticipants": 13,
+    "time": "Tomorrow 18:00",
+    "description": "Join a field hockey meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": [
+      {
+        "clubName": "Field Hockey Athletic Club",
+        "location": "Central Park Courts - Zone 2",
+        "distance": "1.2 mi",
+        "time": "Saturday 10:00"
+      },
+      {
+        "clubName": "Field Hockey Sports Center",
+        "location": "Central Park Courts - Zone 3",
+        "distance": "1.4 mi",
+        "time": "Sunday 09:00"
+      },
+      {
+        "clubName": "Field Hockey Community Hub",
+        "location": "Central Park Courts - Zone 4",
+        "distance": "1.6 mi",
+        "time": "Today 18:00"
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "name": "Ice Hockey Session",
+    "imageKey": "swimming",
+    "location": "Riverside Sports Complex",
+    "distance": "1.2 mi",
+    "participants": 12,
+    "maxParticipants": 15,
+    "time": "Tomorrow 19:00",
+    "description": "Join a ice hockey meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "13",
+    "name": "Lacrosse Session",
+    "imageKey": "basketball",
+    "location": "Metro Athletic Club",
+    "distance": "1.5 mi",
+    "participants": 13,
+    "maxParticipants": 17,
+    "time": "Saturday 10:00",
+    "description": "Join a lacrosse meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Lacrosse Community Hub",
+        "location": "Metro Athletic Club - Zone 2",
+        "distance": "1.7 mi",
+        "time": "Today 18:00"
+      },
+      {
+        "clubName": "Lacrosse Training Grounds",
+        "location": "Metro Athletic Club - Zone 3",
+        "distance": "1.9 mi",
+        "time": "Today 19:00"
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "name": "Handball Session",
+    "imageKey": "soccer",
+    "location": "Downtown Rec Center",
+    "distance": "1.8 mi",
+    "participants": 14,
+    "maxParticipants": 19,
+    "time": "Sunday 09:00",
+    "description": "Join a handball meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "15",
+    "name": "Water Polo Session",
+    "imageKey": "tennis",
+    "location": "Lakeside Arena",
+    "distance": "2.1 mi",
+    "participants": 1,
+    "maxParticipants": 7,
+    "time": "Weeknights 20:00",
+    "description": "Join a water polo meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "16",
+    "name": "Badminton Session",
+    "imageKey": "swimming",
+    "location": "Eastside Community Field",
+    "distance": "2.4 mi",
+    "participants": 2,
+    "maxParticipants": 9,
+    "time": "Daily 06:00",
+    "description": "Join a badminton meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Badminton Athletic Club",
+        "location": "Eastside Community Field - Zone 2",
+        "distance": "2.6 mi",
+        "time": "Tomorrow 20:00"
+      },
+      {
+        "clubName": "Badminton Sports Center",
+        "location": "Eastside Community Field - Zone 3",
+        "distance": "2.8 mi",
+        "time": "Saturday 10:00"
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "name": "Table Tennis Session",
+    "imageKey": "basketball",
+    "location": "West End Gym",
+    "distance": "0.6 mi",
+    "participants": 3,
+    "maxParticipants": 11,
+    "time": "Today 18:00",
+    "description": "Join a table tennis meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "18",
+    "name": "Squash Session",
+    "imageKey": "soccer",
+    "location": "Harbor Activity Hub",
+    "distance": "0.8 mi",
+    "participants": 4,
+    "maxParticipants": 13,
+    "time": "Today 19:00",
+    "description": "Join a squash meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "19",
+    "name": "Racquetball Session",
+    "imageKey": "tennis",
+    "location": "Northview Training Grounds",
+    "distance": "1.0 mi",
+    "participants": 5,
+    "maxParticipants": 15,
+    "time": "Tomorrow 18:00",
+    "description": "Join a racquetball meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Racquetball Training Grounds",
+        "location": "Northview Training Grounds - Zone 2",
+        "distance": "1.2 mi",
+        "time": "Today 18:00"
+      },
+      {
+        "clubName": "Racquetball Arena",
+        "location": "Northview Training Grounds - Zone 3",
+        "distance": "1.4 mi",
+        "time": "Today 19:00"
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "name": "Pickleball Session",
+    "imageKey": "swimming",
+    "location": "Southside Fitness Hall",
+    "distance": "1.2 mi",
+    "participants": 6,
+    "maxParticipants": 17,
+    "time": "Tomorrow 19:00",
+    "description": "Join a pickleball meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "21",
+    "name": "Archery Session",
+    "imageKey": "basketball",
+    "location": "Central Park Courts",
+    "distance": "1.5 mi",
+    "participants": 7,
+    "maxParticipants": 9,
+    "time": "Saturday 10:00",
+    "description": "Join a archery meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": [
+      {
+        "clubName": "Archery Athletic Club",
+        "location": "Central Park Courts - Zone 2",
+        "distance": "1.7 mi",
+        "time": "Tomorrow 18:00"
+      },
+      {
+        "clubName": "Archery Sports Center",
+        "location": "Central Park Courts - Zone 3",
+        "distance": "1.9 mi",
+        "time": "Tomorrow 20:00"
+      },
+      {
+        "clubName": "Archery Community Hub",
+        "location": "Central Park Courts - Zone 4",
+        "distance": "2.1 mi",
+        "time": "Saturday 10:00"
+      }
+    ]
+  },
+  {
+    "id": "22",
+    "name": "Fencing Session",
+    "imageKey": "soccer",
+    "location": "Riverside Sports Complex",
+    "distance": "1.8 mi",
+    "participants": 8,
+    "maxParticipants": 11,
+    "time": "Sunday 09:00",
+    "description": "Join a fencing meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Fencing Sports Center",
+        "location": "Riverside Sports Complex - Zone 2",
+        "distance": "2.0 mi",
+        "time": "Tomorrow 20:00"
+      },
+      {
+        "clubName": "Fencing Community Hub",
+        "location": "Riverside Sports Complex - Zone 3",
+        "distance": "2.2 mi",
+        "time": "Saturday 10:00"
+      }
+    ]
+  },
+  {
+    "id": "23",
+    "name": "Boxing Session",
+    "imageKey": "tennis",
+    "location": "Metro Athletic Club",
+    "distance": "2.1 mi",
+    "participants": 9,
+    "maxParticipants": 13,
+    "time": "Weeknights 20:00",
+    "description": "Join a boxing meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "24",
+    "name": "Kickboxing Session",
+    "imageKey": "swimming",
+    "location": "Downtown Rec Center",
+    "distance": "2.4 mi",
+    "participants": 10,
+    "maxParticipants": 15,
+    "time": "Daily 06:00",
+    "description": "Join a kickboxing meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "25",
+    "name": "Muay Thai Session",
+    "imageKey": "basketball",
+    "location": "Lakeside Arena",
+    "distance": "0.6 mi",
+    "participants": 11,
+    "maxParticipants": 17,
+    "time": "Today 18:00",
+    "description": "Join a muay thai meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Muay Thai Arena",
+        "location": "Lakeside Arena - Zone 2",
+        "distance": "0.8 mi",
+        "time": "Today 18:00"
+      },
+      {
+        "clubName": "Muay Thai Athletic Club",
+        "location": "Lakeside Arena - Zone 3",
+        "distance": "1.0 mi",
+        "time": "Today 19:00"
+      }
+    ]
+  },
+  {
+    "id": "26",
+    "name": "Judo Session",
+    "imageKey": "soccer",
+    "location": "Eastside Community Field",
+    "distance": "0.8 mi",
+    "participants": 12,
+    "maxParticipants": 19,
+    "time": "Today 19:00",
+    "description": "Join a judo meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": [
+      {
+        "clubName": "Judo Athletic Club",
+        "location": "Eastside Community Field - Zone 2",
+        "distance": "1.0 mi",
+        "time": "Today 19:00"
+      },
+      {
+        "clubName": "Judo Sports Center",
+        "location": "Eastside Community Field - Zone 3",
+        "distance": "1.2 mi",
+        "time": "Tomorrow 18:00"
+      },
+      {
+        "clubName": "Judo Community Hub",
+        "location": "Eastside Community Field - Zone 4",
+        "distance": "1.4 mi",
+        "time": "Tomorrow 20:00"
+      }
+    ]
+  },
+  {
+    "id": "27",
+    "name": "Karate Session",
+    "imageKey": "tennis",
+    "location": "West End Gym",
+    "distance": "1.0 mi",
+    "participants": 13,
+    "maxParticipants": 21,
+    "time": "Tomorrow 18:00",
+    "description": "Join a karate meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "28",
+    "name": "Taekwondo Session",
+    "imageKey": "swimming",
+    "location": "Harbor Activity Hub",
+    "distance": "1.2 mi",
+    "participants": 14,
+    "maxParticipants": 23,
+    "time": "Tomorrow 19:00",
+    "description": "Join a taekwondo meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Taekwondo Community Hub",
+        "location": "Harbor Activity Hub - Zone 2",
+        "distance": "1.4 mi",
+        "time": "Tomorrow 20:00"
+      },
+      {
+        "clubName": "Taekwondo Training Grounds",
+        "location": "Harbor Activity Hub - Zone 3",
+        "distance": "1.6 mi",
+        "time": "Saturday 10:00"
+      }
+    ]
+  },
+  {
+    "id": "29",
+    "name": "Brazilian Jiu-Jitsu Session",
+    "imageKey": "basketball",
+    "location": "Northview Training Grounds",
+    "distance": "1.5 mi",
+    "participants": 1,
+    "maxParticipants": 11,
+    "time": "Saturday 10:00",
+    "description": "Join a brazilian jiu-jitsu meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "30",
+    "name": "Wrestling Session",
+    "imageKey": "soccer",
+    "location": "Southside Fitness Hall",
+    "distance": "1.8 mi",
+    "participants": 2,
+    "maxParticipants": 13,
+    "time": "Sunday 09:00",
+    "description": "Join a wrestling meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "31",
+    "name": "MMA Session",
+    "imageKey": "tennis",
+    "location": "Central Park Courts",
+    "distance": "2.1 mi",
+    "participants": 3,
+    "maxParticipants": 5,
+    "time": "Weeknights 20:00",
+    "description": "Join a mma meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "MMA Athletic Club",
+        "location": "Central Park Courts - Zone 2",
+        "distance": "2.3 mi",
+        "time": "Today 18:00"
+      },
+      {
+        "clubName": "MMA Sports Center",
+        "location": "Central Park Courts - Zone 3",
+        "distance": "2.5 mi",
+        "time": "Today 19:00"
+      }
+    ]
+  },
+  {
+    "id": "32",
+    "name": "Aikido Session",
+    "imageKey": "swimming",
+    "location": "Riverside Sports Complex",
+    "distance": "2.4 mi",
+    "participants": 4,
+    "maxParticipants": 7,
+    "time": "Daily 06:00",
+    "description": "Join a aikido meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "33",
+    "name": "Kendo Session",
+    "imageKey": "basketball",
+    "location": "Metro Athletic Club",
+    "distance": "0.6 mi",
+    "participants": 5,
+    "maxParticipants": 9,
+    "time": "Today 18:00",
+    "description": "Join a kendo meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "34",
+    "name": "Sambo Session",
+    "imageKey": "soccer",
+    "location": "Downtown Rec Center",
+    "distance": "0.8 mi",
+    "participants": 6,
+    "maxParticipants": 11,
+    "time": "Today 19:00",
+    "description": "Join a sambo meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Sambo Training Grounds",
+        "location": "Downtown Rec Center - Zone 2",
+        "distance": "1.0 mi",
+        "time": "Tomorrow 20:00"
+      },
+      {
+        "clubName": "Sambo Arena",
+        "location": "Downtown Rec Center - Zone 3",
+        "distance": "1.2 mi",
+        "time": "Saturday 10:00"
+      }
+    ]
+  },
+  {
+    "id": "35",
+    "name": "Sailing Session",
+    "imageKey": "tennis",
+    "location": "Lakeside Arena",
+    "distance": "1.0 mi",
+    "participants": 7,
+    "maxParticipants": 13,
+    "time": "Tomorrow 18:00",
+    "description": "Join a sailing meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "36",
+    "name": "Rowing Session",
+    "imageKey": "swimming",
+    "location": "Eastside Community Field",
+    "distance": "1.2 mi",
+    "participants": 8,
+    "maxParticipants": 15,
+    "time": "Tomorrow 19:00",
+    "description": "Join a rowing meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": [
+      {
+        "clubName": "Rowing Athletic Club",
+        "location": "Eastside Community Field - Zone 2",
+        "distance": "1.4 mi",
+        "time": "Sunday 09:00"
+      },
+      {
+        "clubName": "Rowing Sports Center",
+        "location": "Eastside Community Field - Zone 3",
+        "distance": "1.6 mi",
+        "time": "Today 18:00"
+      },
+      {
+        "clubName": "Rowing Community Hub",
+        "location": "Eastside Community Field - Zone 4",
+        "distance": "1.8 mi",
+        "time": "Today 19:00"
+      }
+    ]
+  },
+  {
+    "id": "37",
+    "name": "Canoeing Session",
+    "imageKey": "basketball",
+    "location": "West End Gym",
+    "distance": "1.5 mi",
+    "participants": 9,
+    "maxParticipants": 17,
+    "time": "Saturday 10:00",
+    "description": "Join a canoeing meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Canoeing Sports Center",
+        "location": "West End Gym - Zone 2",
+        "distance": "1.7 mi",
+        "time": "Today 18:00"
+      },
+      {
+        "clubName": "Canoeing Community Hub",
+        "location": "West End Gym - Zone 3",
+        "distance": "1.9 mi",
+        "time": "Today 19:00"
+      }
+    ]
+  },
+  {
+    "id": "38",
+    "name": "Kayaking Session",
+    "imageKey": "soccer",
+    "location": "Harbor Activity Hub",
+    "distance": "1.8 mi",
+    "participants": 10,
+    "maxParticipants": 19,
+    "time": "Sunday 09:00",
+    "description": "Join a kayaking meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "39",
+    "name": "Surfing Session",
+    "imageKey": "tennis",
+    "location": "Northview Training Grounds",
+    "distance": "2.1 mi",
+    "participants": 11,
+    "maxParticipants": 21,
+    "time": "Weeknights 20:00",
+    "description": "Join a surfing meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "40",
+    "name": "Windsurfing Session",
+    "imageKey": "swimming",
+    "location": "Southside Fitness Hall",
+    "distance": "2.4 mi",
+    "participants": 12,
+    "maxParticipants": 23,
+    "time": "Daily 06:00",
+    "description": "Join a windsurfing meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Windsurfing Arena",
+        "location": "Southside Fitness Hall - Zone 2",
+        "distance": "2.6 mi",
+        "time": "Tomorrow 20:00"
+      },
+      {
+        "clubName": "Windsurfing Athletic Club",
+        "location": "Southside Fitness Hall - Zone 3",
+        "distance": "2.8 mi",
+        "time": "Saturday 10:00"
+      }
+    ]
+  },
+  {
+    "id": "41",
+    "name": "Kitesurfing Session",
+    "imageKey": "basketball",
+    "location": "Central Park Courts",
+    "distance": "0.6 mi",
+    "participants": 13,
+    "maxParticipants": 15,
+    "time": "Today 18:00",
+    "description": "Join a kitesurfing meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": [
+      {
+        "clubName": "Kitesurfing Athletic Club",
+        "location": "Central Park Courts - Zone 2",
+        "distance": "0.8 mi",
+        "time": "Saturday 10:00"
+      },
+      {
+        "clubName": "Kitesurfing Sports Center",
+        "location": "Central Park Courts - Zone 3",
+        "distance": "1.0 mi",
+        "time": "Sunday 09:00"
+      },
+      {
+        "clubName": "Kitesurfing Community Hub",
+        "location": "Central Park Courts - Zone 4",
+        "distance": "1.2 mi",
+        "time": "Today 18:00"
+      }
+    ]
+  },
+  {
+    "id": "42",
+    "name": "Stand-Up Paddleboarding Session",
+    "imageKey": "soccer",
+    "location": "Riverside Sports Complex",
+    "distance": "0.8 mi",
+    "participants": 14,
+    "maxParticipants": 17,
+    "time": "Today 19:00",
+    "description": "Join a stand-up paddleboarding meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "43",
+    "name": "Diving Session",
+    "imageKey": "tennis",
+    "location": "Metro Athletic Club",
+    "distance": "1.0 mi",
+    "participants": 1,
+    "maxParticipants": 5,
+    "time": "Tomorrow 18:00",
+    "description": "Join a diving meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Diving Community Hub",
+        "location": "Metro Athletic Club - Zone 2",
+        "distance": "1.2 mi",
+        "time": "Today 18:00"
+      },
+      {
+        "clubName": "Diving Training Grounds",
+        "location": "Metro Athletic Club - Zone 3",
+        "distance": "1.4 mi",
+        "time": "Today 19:00"
+      }
+    ]
+  },
+  {
+    "id": "44",
+    "name": "Triathlon Session",
+    "imageKey": "swimming",
+    "location": "Downtown Rec Center",
+    "distance": "1.2 mi",
+    "participants": 2,
+    "maxParticipants": 7,
+    "time": "Tomorrow 19:00",
+    "description": "Join a triathlon meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "45",
+    "name": "Duathlon Session",
+    "imageKey": "basketball",
+    "location": "Lakeside Arena",
+    "distance": "1.5 mi",
+    "participants": 3,
+    "maxParticipants": 9,
+    "time": "Saturday 10:00",
+    "description": "Join a duathlon meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "46",
+    "name": "Cycling Session",
+    "imageKey": "soccer",
+    "location": "Eastside Community Field",
+    "distance": "1.8 mi",
+    "participants": 4,
+    "maxParticipants": 11,
+    "time": "Sunday 09:00",
+    "description": "Join a cycling meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Cycling Athletic Club",
+        "location": "Eastside Community Field - Zone 2",
+        "distance": "2.0 mi",
+        "time": "Tomorrow 20:00"
+      },
+      {
+        "clubName": "Cycling Sports Center",
+        "location": "Eastside Community Field - Zone 3",
+        "distance": "2.2 mi",
+        "time": "Saturday 10:00"
+      }
+    ]
+  },
+  {
+    "id": "47",
+    "name": "Mountain Biking Session",
+    "imageKey": "tennis",
+    "location": "West End Gym",
+    "distance": "2.1 mi",
+    "participants": 5,
+    "maxParticipants": 13,
+    "time": "Weeknights 20:00",
+    "description": "Join a mountain biking meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "48",
+    "name": "BMX Session",
+    "imageKey": "swimming",
+    "location": "Harbor Activity Hub",
+    "distance": "2.4 mi",
+    "participants": 6,
+    "maxParticipants": 15,
+    "time": "Daily 06:00",
+    "description": "Join a bmx meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "49",
+    "name": "Track Cycling Session",
+    "imageKey": "basketball",
+    "location": "Northview Training Grounds",
+    "distance": "0.6 mi",
+    "participants": 7,
+    "maxParticipants": 17,
+    "time": "Today 18:00",
+    "description": "Join a track cycling meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Track Cycling Training Grounds",
+        "location": "Northview Training Grounds - Zone 2",
+        "distance": "0.8 mi",
+        "time": "Today 18:00"
+      },
+      {
+        "clubName": "Track Cycling Arena",
+        "location": "Northview Training Grounds - Zone 3",
+        "distance": "1.0 mi",
+        "time": "Today 19:00"
+      }
+    ]
+  },
+  {
+    "id": "50",
+    "name": "Skateboarding Session",
+    "imageKey": "soccer",
+    "location": "Southside Fitness Hall",
+    "distance": "0.8 mi",
+    "participants": 8,
+    "maxParticipants": 19,
+    "time": "Today 19:00",
+    "description": "Join a skateboarding meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "51",
+    "name": "Longboarding Session",
+    "imageKey": "tennis",
+    "location": "Central Park Courts",
+    "distance": "1.0 mi",
+    "participants": 9,
+    "maxParticipants": 11,
+    "time": "Tomorrow 18:00",
+    "description": "Join a longboarding meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": [
+      {
+        "clubName": "Longboarding Athletic Club",
+        "location": "Central Park Courts - Zone 2",
+        "distance": "1.2 mi",
+        "time": "Tomorrow 18:00"
+      },
+      {
+        "clubName": "Longboarding Sports Center",
+        "location": "Central Park Courts - Zone 3",
+        "distance": "1.4 mi",
+        "time": "Tomorrow 20:00"
+      },
+      {
+        "clubName": "Longboarding Community Hub",
+        "location": "Central Park Courts - Zone 4",
+        "distance": "1.6 mi",
+        "time": "Saturday 10:00"
+      }
+    ]
+  },
+  {
+    "id": "52",
+    "name": "Roller Derby Session",
+    "imageKey": "swimming",
+    "location": "Riverside Sports Complex",
+    "distance": "1.2 mi",
+    "participants": 10,
+    "maxParticipants": 13,
+    "time": "Tomorrow 19:00",
+    "description": "Join a roller derby meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Roller Derby Sports Center",
+        "location": "Riverside Sports Complex - Zone 2",
+        "distance": "1.4 mi",
+        "time": "Tomorrow 20:00"
+      },
+      {
+        "clubName": "Roller Derby Community Hub",
+        "location": "Riverside Sports Complex - Zone 3",
+        "distance": "1.6 mi",
+        "time": "Saturday 10:00"
+      }
+    ]
+  },
+  {
+    "id": "53",
+    "name": "Inline Skating Session",
+    "imageKey": "basketball",
+    "location": "Metro Athletic Club",
+    "distance": "1.5 mi",
+    "participants": 11,
+    "maxParticipants": 15,
+    "time": "Saturday 10:00",
+    "description": "Join a inline skating meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "54",
+    "name": "Speed Skating Session",
+    "imageKey": "soccer",
+    "location": "Downtown Rec Center",
+    "distance": "1.8 mi",
+    "participants": 12,
+    "maxParticipants": 17,
+    "time": "Sunday 09:00",
+    "description": "Join a speed skating meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "55",
+    "name": "Figure Skating Session",
+    "imageKey": "tennis",
+    "location": "Lakeside Arena",
+    "distance": "2.1 mi",
+    "participants": 13,
+    "maxParticipants": 19,
+    "time": "Weeknights 20:00",
+    "description": "Join a figure skating meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Figure Skating Arena",
+        "location": "Lakeside Arena - Zone 2",
+        "distance": "2.3 mi",
+        "time": "Today 18:00"
+      },
+      {
+        "clubName": "Figure Skating Athletic Club",
+        "location": "Lakeside Arena - Zone 3",
+        "distance": "2.5 mi",
+        "time": "Today 19:00"
+      }
+    ]
+  },
+  {
+    "id": "56",
+    "name": "Skiing Session",
+    "imageKey": "swimming",
+    "location": "Eastside Community Field",
+    "distance": "2.4 mi",
+    "participants": 14,
+    "maxParticipants": 21,
+    "time": "Daily 06:00",
+    "description": "Join a skiing meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": [
+      {
+        "clubName": "Skiing Athletic Club",
+        "location": "Eastside Community Field - Zone 2",
+        "distance": "2.6 mi",
+        "time": "Today 19:00"
+      },
+      {
+        "clubName": "Skiing Sports Center",
+        "location": "Eastside Community Field - Zone 3",
+        "distance": "2.8 mi",
+        "time": "Tomorrow 18:00"
+      },
+      {
+        "clubName": "Skiing Community Hub",
+        "location": "Eastside Community Field - Zone 4",
+        "distance": "3.0 mi",
+        "time": "Tomorrow 20:00"
+      }
+    ]
+  },
+  {
+    "id": "57",
+    "name": "Snowboarding Session",
+    "imageKey": "basketball",
+    "location": "West End Gym",
+    "distance": "0.6 mi",
+    "participants": 1,
+    "maxParticipants": 9,
+    "time": "Today 18:00",
+    "description": "Join a snowboarding meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "58",
+    "name": "Cross-Country Skiing Session",
+    "imageKey": "soccer",
+    "location": "Harbor Activity Hub",
+    "distance": "0.8 mi",
+    "participants": 2,
+    "maxParticipants": 11,
+    "time": "Today 19:00",
+    "description": "Join a cross-country skiing meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Cross-Country Skiing Community Hub",
+        "location": "Harbor Activity Hub - Zone 2",
+        "distance": "1.0 mi",
+        "time": "Tomorrow 20:00"
+      },
+      {
+        "clubName": "Cross-Country Skiing Training Grounds",
+        "location": "Harbor Activity Hub - Zone 3",
+        "distance": "1.2 mi",
+        "time": "Saturday 10:00"
+      }
+    ]
+  },
+  {
+    "id": "59",
+    "name": "Biathlon Session",
+    "imageKey": "tennis",
+    "location": "Northview Training Grounds",
+    "distance": "1.0 mi",
+    "participants": 3,
+    "maxParticipants": 13,
+    "time": "Tomorrow 18:00",
+    "description": "Join a biathlon meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "60",
+    "name": "Bobsleigh Session",
+    "imageKey": "swimming",
+    "location": "Southside Fitness Hall",
+    "distance": "1.2 mi",
+    "participants": 4,
+    "maxParticipants": 15,
+    "time": "Tomorrow 19:00",
+    "description": "Join a bobsleigh meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "61",
+    "name": "Luge Session",
+    "imageKey": "basketball",
+    "location": "Central Park Courts",
+    "distance": "1.5 mi",
+    "participants": 5,
+    "maxParticipants": 7,
+    "time": "Saturday 10:00",
+    "description": "Join a luge meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Luge Athletic Club",
+        "location": "Central Park Courts - Zone 2",
+        "distance": "1.7 mi",
+        "time": "Today 18:00"
+      },
+      {
+        "clubName": "Luge Sports Center",
+        "location": "Central Park Courts - Zone 3",
+        "distance": "1.9 mi",
+        "time": "Today 19:00"
+      }
+    ]
+  },
+  {
+    "id": "62",
+    "name": "Skeleton Session",
+    "imageKey": "soccer",
+    "location": "Riverside Sports Complex",
+    "distance": "1.8 mi",
+    "participants": 6,
+    "maxParticipants": 9,
+    "time": "Sunday 09:00",
+    "description": "Join a skeleton meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "63",
+    "name": "Curling Session",
+    "imageKey": "tennis",
+    "location": "Metro Athletic Club",
+    "distance": "2.1 mi",
+    "participants": 7,
+    "maxParticipants": 11,
+    "time": "Weeknights 20:00",
+    "description": "Join a curling meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "64",
+    "name": "Rock Climbing Session",
+    "imageKey": "swimming",
+    "location": "Downtown Rec Center",
+    "distance": "2.4 mi",
+    "participants": 8,
+    "maxParticipants": 13,
+    "time": "Daily 06:00",
+    "description": "Join a rock climbing meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Rock Climbing Training Grounds",
+        "location": "Downtown Rec Center - Zone 2",
+        "distance": "2.6 mi",
+        "time": "Tomorrow 20:00"
+      },
+      {
+        "clubName": "Rock Climbing Arena",
+        "location": "Downtown Rec Center - Zone 3",
+        "distance": "2.8 mi",
+        "time": "Saturday 10:00"
+      }
+    ]
+  },
+  {
+    "id": "65",
+    "name": "Bouldering Session",
+    "imageKey": "basketball",
+    "location": "Lakeside Arena",
+    "distance": "0.6 mi",
+    "participants": 9,
+    "maxParticipants": 15,
+    "time": "Today 18:00",
+    "description": "Join a bouldering meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "66",
+    "name": "Mountaineering Session",
+    "imageKey": "soccer",
+    "location": "Eastside Community Field",
+    "distance": "0.8 mi",
+    "participants": 10,
+    "maxParticipants": 17,
+    "time": "Today 19:00",
+    "description": "Join a mountaineering meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": [
+      {
+        "clubName": "Mountaineering Athletic Club",
+        "location": "Eastside Community Field - Zone 2",
+        "distance": "1.0 mi",
+        "time": "Sunday 09:00"
+      },
+      {
+        "clubName": "Mountaineering Sports Center",
+        "location": "Eastside Community Field - Zone 3",
+        "distance": "1.2 mi",
+        "time": "Today 18:00"
+      },
+      {
+        "clubName": "Mountaineering Community Hub",
+        "location": "Eastside Community Field - Zone 4",
+        "distance": "1.4 mi",
+        "time": "Today 19:00"
+      }
+    ]
+  },
+  {
+    "id": "67",
+    "name": "Trail Running Session",
+    "imageKey": "tennis",
+    "location": "West End Gym",
+    "distance": "1.0 mi",
+    "participants": 11,
+    "maxParticipants": 19,
+    "time": "Tomorrow 18:00",
+    "description": "Join a trail running meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Trail Running Sports Center",
+        "location": "West End Gym - Zone 2",
+        "distance": "1.2 mi",
+        "time": "Today 18:00"
+      },
+      {
+        "clubName": "Trail Running Community Hub",
+        "location": "West End Gym - Zone 3",
+        "distance": "1.4 mi",
+        "time": "Today 19:00"
+      }
+    ]
+  },
+  {
+    "id": "68",
+    "name": "Marathon Running Session",
+    "imageKey": "swimming",
+    "location": "Harbor Activity Hub",
+    "distance": "1.2 mi",
+    "participants": 12,
+    "maxParticipants": 21,
+    "time": "Tomorrow 19:00",
+    "description": "Join a marathon running meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "69",
+    "name": "Sprint Training Session",
+    "imageKey": "basketball",
+    "location": "Northview Training Grounds",
+    "distance": "1.5 mi",
+    "participants": 13,
+    "maxParticipants": 23,
+    "time": "Saturday 10:00",
+    "description": "Join a sprint training meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "70",
+    "name": "Obstacle Course Racing Session",
+    "imageKey": "soccer",
+    "location": "Southside Fitness Hall",
+    "distance": "1.8 mi",
+    "participants": 14,
+    "maxParticipants": 25,
+    "time": "Sunday 09:00",
+    "description": "Join a obstacle course racing meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Obstacle Course Racing Arena",
+        "location": "Southside Fitness Hall - Zone 2",
+        "distance": "2.0 mi",
+        "time": "Tomorrow 20:00"
+      },
+      {
+        "clubName": "Obstacle Course Racing Athletic Club",
+        "location": "Southside Fitness Hall - Zone 3",
+        "distance": "2.2 mi",
+        "time": "Saturday 10:00"
+      }
+    ]
+  },
+  {
+    "id": "71",
+    "name": "Parkour Session",
+    "imageKey": "tennis",
+    "location": "Central Park Courts",
+    "distance": "2.1 mi",
+    "participants": 1,
+    "maxParticipants": 3,
+    "time": "Weeknights 20:00",
+    "description": "Join a parkour meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": [
+      {
+        "clubName": "Parkour Athletic Club",
+        "location": "Central Park Courts - Zone 2",
+        "distance": "2.3 mi",
+        "time": "Saturday 10:00"
+      },
+      {
+        "clubName": "Parkour Sports Center",
+        "location": "Central Park Courts - Zone 3",
+        "distance": "2.5 mi",
+        "time": "Sunday 09:00"
+      },
+      {
+        "clubName": "Parkour Community Hub",
+        "location": "Central Park Courts - Zone 4",
+        "distance": "2.7 mi",
+        "time": "Today 18:00"
+      }
+    ]
+  },
+  {
+    "id": "72",
+    "name": "Ultimate Frisbee Session",
+    "imageKey": "swimming",
+    "location": "Riverside Sports Complex",
+    "distance": "2.4 mi",
+    "participants": 2,
+    "maxParticipants": 5,
+    "time": "Daily 06:00",
+    "description": "Join a ultimate frisbee meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "73",
+    "name": "Disc Golf Session",
+    "imageKey": "basketball",
+    "location": "Metro Athletic Club",
+    "distance": "0.6 mi",
+    "participants": 3,
+    "maxParticipants": 7,
+    "time": "Today 18:00",
+    "description": "Join a disc golf meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Disc Golf Community Hub",
+        "location": "Metro Athletic Club - Zone 2",
+        "distance": "0.8 mi",
+        "time": "Today 18:00"
+      },
+      {
+        "clubName": "Disc Golf Training Grounds",
+        "location": "Metro Athletic Club - Zone 3",
+        "distance": "1.0 mi",
+        "time": "Today 19:00"
+      }
+    ]
+  },
+  {
+    "id": "74",
+    "name": "Dodgeball Session",
+    "imageKey": "soccer",
+    "location": "Downtown Rec Center",
+    "distance": "0.8 mi",
+    "participants": 4,
+    "maxParticipants": 9,
+    "time": "Today 19:00",
+    "description": "Join a dodgeball meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "75",
+    "name": "Netball Session",
+    "imageKey": "tennis",
+    "location": "Lakeside Arena",
+    "distance": "1.0 mi",
+    "participants": 5,
+    "maxParticipants": 11,
+    "time": "Tomorrow 18:00",
+    "description": "Join a netball meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "76",
+    "name": "Sepak Takraw Session",
+    "imageKey": "swimming",
+    "location": "Eastside Community Field",
+    "distance": "1.2 mi",
+    "participants": 6,
+    "maxParticipants": 13,
+    "time": "Tomorrow 19:00",
+    "description": "Join a sepak takraw meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Sepak Takraw Athletic Club",
+        "location": "Eastside Community Field - Zone 2",
+        "distance": "1.4 mi",
+        "time": "Tomorrow 20:00"
+      },
+      {
+        "clubName": "Sepak Takraw Sports Center",
+        "location": "Eastside Community Field - Zone 3",
+        "distance": "1.6 mi",
+        "time": "Saturday 10:00"
+      }
+    ]
+  },
+  {
+    "id": "77",
+    "name": "Kabaddi Session",
+    "imageKey": "basketball",
+    "location": "West End Gym",
+    "distance": "1.5 mi",
+    "participants": 7,
+    "maxParticipants": 15,
+    "time": "Saturday 10:00",
+    "description": "Join a kabaddi meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "78",
+    "name": "Polo Session",
+    "imageKey": "soccer",
+    "location": "Harbor Activity Hub",
+    "distance": "1.8 mi",
+    "participants": 8,
+    "maxParticipants": 17,
+    "time": "Sunday 09:00",
+    "description": "Join a polo meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "79",
+    "name": "Equestrian Jumping Session",
+    "imageKey": "tennis",
+    "location": "Northview Training Grounds",
+    "distance": "2.1 mi",
+    "participants": 9,
+    "maxParticipants": 19,
+    "time": "Weeknights 20:00",
+    "description": "Join a equestrian jumping meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Equestrian Jumping Training Grounds",
+        "location": "Northview Training Grounds - Zone 2",
+        "distance": "2.3 mi",
+        "time": "Today 18:00"
+      },
+      {
+        "clubName": "Equestrian Jumping Arena",
+        "location": "Northview Training Grounds - Zone 3",
+        "distance": "2.5 mi",
+        "time": "Today 19:00"
+      }
+    ]
+  },
+  {
+    "id": "80",
+    "name": "Dressage Session",
+    "imageKey": "swimming",
+    "location": "Southside Fitness Hall",
+    "distance": "2.4 mi",
+    "participants": 10,
+    "maxParticipants": 21,
+    "time": "Daily 06:00",
+    "description": "Join a dressage meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "81",
+    "name": "Gymnastics Session",
+    "imageKey": "basketball",
+    "location": "Central Park Courts",
+    "distance": "0.6 mi",
+    "participants": 11,
+    "maxParticipants": 13,
+    "time": "Today 18:00",
+    "description": "Join a gymnastics meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": [
+      {
+        "clubName": "Gymnastics Athletic Club",
+        "location": "Central Park Courts - Zone 2",
+        "distance": "0.8 mi",
+        "time": "Tomorrow 18:00"
+      },
+      {
+        "clubName": "Gymnastics Sports Center",
+        "location": "Central Park Courts - Zone 3",
+        "distance": "1.0 mi",
+        "time": "Tomorrow 20:00"
+      },
+      {
+        "clubName": "Gymnastics Community Hub",
+        "location": "Central Park Courts - Zone 4",
+        "distance": "1.2 mi",
+        "time": "Saturday 10:00"
+      }
+    ]
+  },
+  {
+    "id": "82",
+    "name": "Rhythmic Gymnastics Session",
+    "imageKey": "soccer",
+    "location": "Riverside Sports Complex",
+    "distance": "0.8 mi",
+    "participants": 12,
+    "maxParticipants": 15,
+    "time": "Today 19:00",
+    "description": "Join a rhythmic gymnastics meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Rhythmic Gymnastics Sports Center",
+        "location": "Riverside Sports Complex - Zone 2",
+        "distance": "1.0 mi",
+        "time": "Tomorrow 20:00"
+      },
+      {
+        "clubName": "Rhythmic Gymnastics Community Hub",
+        "location": "Riverside Sports Complex - Zone 3",
+        "distance": "1.2 mi",
+        "time": "Saturday 10:00"
+      }
+    ]
+  },
+  {
+    "id": "83",
+    "name": "Trampoline Session",
+    "imageKey": "tennis",
+    "location": "Metro Athletic Club",
+    "distance": "1.0 mi",
+    "participants": 13,
+    "maxParticipants": 17,
+    "time": "Tomorrow 18:00",
+    "description": "Join a trampoline meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "84",
+    "name": "Powerlifting Session",
+    "imageKey": "swimming",
+    "location": "Downtown Rec Center",
+    "distance": "1.2 mi",
+    "participants": 14,
+    "maxParticipants": 19,
+    "time": "Tomorrow 19:00",
+    "description": "Join a powerlifting meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "85",
+    "name": "Weightlifting Session",
+    "imageKey": "basketball",
+    "location": "Lakeside Arena",
+    "distance": "1.5 mi",
+    "participants": 1,
+    "maxParticipants": 7,
+    "time": "Saturday 10:00",
+    "description": "Join a weightlifting meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Weightlifting Arena",
+        "location": "Lakeside Arena - Zone 2",
+        "distance": "1.7 mi",
+        "time": "Today 18:00"
+      },
+      {
+        "clubName": "Weightlifting Athletic Club",
+        "location": "Lakeside Arena - Zone 3",
+        "distance": "1.9 mi",
+        "time": "Today 19:00"
+      }
+    ]
+  },
+  {
+    "id": "86",
+    "name": "Strongman Session",
+    "imageKey": "soccer",
+    "location": "Eastside Community Field",
+    "distance": "1.8 mi",
+    "participants": 2,
+    "maxParticipants": 9,
+    "time": "Sunday 09:00",
+    "description": "Join a strongman meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": [
+      {
+        "clubName": "Strongman Athletic Club",
+        "location": "Eastside Community Field - Zone 2",
+        "distance": "2.0 mi",
+        "time": "Today 19:00"
+      },
+      {
+        "clubName": "Strongman Sports Center",
+        "location": "Eastside Community Field - Zone 3",
+        "distance": "2.2 mi",
+        "time": "Tomorrow 18:00"
+      },
+      {
+        "clubName": "Strongman Community Hub",
+        "location": "Eastside Community Field - Zone 4",
+        "distance": "2.4 mi",
+        "time": "Tomorrow 20:00"
+      }
+    ]
+  },
+  {
+    "id": "87",
+    "name": "CrossFit Session",
+    "imageKey": "tennis",
+    "location": "West End Gym",
+    "distance": "2.1 mi",
+    "participants": 3,
+    "maxParticipants": 11,
+    "time": "Weeknights 20:00",
+    "description": "Join a crossfit meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "88",
+    "name": "Calisthenics Session",
+    "imageKey": "swimming",
+    "location": "Harbor Activity Hub",
+    "distance": "2.4 mi",
+    "participants": 4,
+    "maxParticipants": 13,
+    "time": "Daily 06:00",
+    "description": "Join a calisthenics meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Calisthenics Community Hub",
+        "location": "Harbor Activity Hub - Zone 2",
+        "distance": "2.6 mi",
+        "time": "Tomorrow 20:00"
+      },
+      {
+        "clubName": "Calisthenics Training Grounds",
+        "location": "Harbor Activity Hub - Zone 3",
+        "distance": "2.8 mi",
+        "time": "Saturday 10:00"
+      }
+    ]
+  },
+  {
+    "id": "89",
+    "name": "Yoga Session",
+    "imageKey": "basketball",
+    "location": "Northview Training Grounds",
+    "distance": "0.6 mi",
+    "participants": 5,
+    "maxParticipants": 15,
+    "time": "Today 18:00",
+    "description": "Join a yoga meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "90",
+    "name": "Pilates Session",
+    "imageKey": "soccer",
+    "location": "Southside Fitness Hall",
+    "distance": "0.8 mi",
+    "participants": 6,
+    "maxParticipants": 17,
+    "time": "Today 19:00",
+    "description": "Join a pilates meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "91",
+    "name": "Dance Fitness Session",
+    "imageKey": "tennis",
+    "location": "Central Park Courts",
+    "distance": "1.0 mi",
+    "participants": 7,
+    "maxParticipants": 9,
+    "time": "Tomorrow 18:00",
+    "description": "Join a dance fitness meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Dance Fitness Athletic Club",
+        "location": "Central Park Courts - Zone 2",
+        "distance": "1.2 mi",
+        "time": "Today 18:00"
+      },
+      {
+        "clubName": "Dance Fitness Sports Center",
+        "location": "Central Park Courts - Zone 3",
+        "distance": "1.4 mi",
+        "time": "Today 19:00"
+      }
+    ]
+  },
+  {
+    "id": "92",
+    "name": "Zumba Session",
+    "imageKey": "swimming",
+    "location": "Riverside Sports Complex",
+    "distance": "1.2 mi",
+    "participants": 8,
+    "maxParticipants": 11,
+    "time": "Tomorrow 19:00",
+    "description": "Join a zumba meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "93",
+    "name": "Aerobics Session",
+    "imageKey": "basketball",
+    "location": "Metro Athletic Club",
+    "distance": "1.5 mi",
+    "participants": 9,
+    "maxParticipants": 13,
+    "time": "Saturday 10:00",
+    "description": "Join a aerobics meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "94",
+    "name": "Orienteering Session",
+    "imageKey": "soccer",
+    "location": "Downtown Rec Center",
+    "distance": "1.8 mi",
+    "participants": 10,
+    "maxParticipants": 15,
+    "time": "Sunday 09:00",
+    "description": "Join a orienteering meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Orienteering Training Grounds",
+        "location": "Downtown Rec Center - Zone 2",
+        "distance": "2.0 mi",
+        "time": "Tomorrow 20:00"
+      },
+      {
+        "clubName": "Orienteering Arena",
+        "location": "Downtown Rec Center - Zone 3",
+        "distance": "2.2 mi",
+        "time": "Saturday 10:00"
+      }
+    ]
+  },
+  {
+    "id": "95",
+    "name": "Geocaching Adventure Run Session",
+    "imageKey": "tennis",
+    "location": "Lakeside Arena",
+    "distance": "2.1 mi",
+    "participants": 11,
+    "maxParticipants": 17,
+    "time": "Weeknights 20:00",
+    "description": "Join a geocaching adventure run meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "96",
+    "name": "Bowling Session",
+    "imageKey": "swimming",
+    "location": "Eastside Community Field",
+    "distance": "2.4 mi",
+    "participants": 12,
+    "maxParticipants": 19,
+    "time": "Daily 06:00",
+    "description": "Join a bowling meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": [
+      {
+        "clubName": "Bowling Athletic Club",
+        "location": "Eastside Community Field - Zone 2",
+        "distance": "2.6 mi",
+        "time": "Sunday 09:00"
+      },
+      {
+        "clubName": "Bowling Sports Center",
+        "location": "Eastside Community Field - Zone 3",
+        "distance": "2.8 mi",
+        "time": "Today 18:00"
+      },
+      {
+        "clubName": "Bowling Community Hub",
+        "location": "Eastside Community Field - Zone 4",
+        "distance": "3.0 mi",
+        "time": "Today 19:00"
+      }
+    ]
+  },
+  {
+    "id": "97",
+    "name": "Billiards Session",
+    "imageKey": "basketball",
+    "location": "West End Gym",
+    "distance": "0.6 mi",
+    "participants": 13,
+    "maxParticipants": 21,
+    "time": "Today 18:00",
+    "description": "Join a billiards meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Billiards Sports Center",
+        "location": "West End Gym - Zone 2",
+        "distance": "0.8 mi",
+        "time": "Today 18:00"
+      },
+      {
+        "clubName": "Billiards Community Hub",
+        "location": "West End Gym - Zone 3",
+        "distance": "1.0 mi",
+        "time": "Today 19:00"
+      }
+    ]
+  },
+  {
+    "id": "98",
+    "name": "Snooker Session",
+    "imageKey": "soccer",
+    "location": "Harbor Activity Hub",
+    "distance": "0.8 mi",
+    "participants": 14,
+    "maxParticipants": 23,
+    "time": "Today 19:00",
+    "description": "Join a snooker meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "99",
+    "name": "Darts Session",
+    "imageKey": "tennis",
+    "location": "Northview Training Grounds",
+    "distance": "1.0 mi",
+    "participants": 1,
+    "maxParticipants": 11,
+    "time": "Tomorrow 18:00",
+    "description": "Join a darts meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "100",
+    "name": "Chess Boxing Session",
+    "imageKey": "swimming",
+    "location": "Southside Fitness Hall",
+    "distance": "1.2 mi",
+    "participants": 2,
+    "maxParticipants": 13,
+    "time": "Tomorrow 19:00",
+    "description": "Join a chess boxing meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Chess Boxing Arena",
+        "location": "Southside Fitness Hall - Zone 2",
+        "distance": "1.4 mi",
+        "time": "Tomorrow 20:00"
+      },
+      {
+        "clubName": "Chess Boxing Athletic Club",
+        "location": "Southside Fitness Hall - Zone 3",
+        "distance": "1.6 mi",
+        "time": "Saturday 10:00"
+      }
+    ]
+  },
+  {
+    "id": "101",
+    "name": "Dragon Boat Session",
+    "imageKey": "basketball",
+    "location": "Central Park Courts",
+    "distance": "1.5 mi",
+    "participants": 3,
+    "maxParticipants": 5,
+    "time": "Saturday 10:00",
+    "description": "Join a dragon boat meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": [
+      {
+        "clubName": "Dragon Boat Athletic Club",
+        "location": "Central Park Courts - Zone 2",
+        "distance": "1.7 mi",
+        "time": "Saturday 10:00"
+      },
+      {
+        "clubName": "Dragon Boat Sports Center",
+        "location": "Central Park Courts - Zone 3",
+        "distance": "1.9 mi",
+        "time": "Sunday 09:00"
+      },
+      {
+        "clubName": "Dragon Boat Community Hub",
+        "location": "Central Park Courts - Zone 4",
+        "distance": "2.1 mi",
+        "time": "Today 18:00"
+      }
+    ]
+  },
+  {
+    "id": "102",
+    "name": "Paddle Tennis Session",
+    "imageKey": "soccer",
+    "location": "Riverside Sports Complex",
+    "distance": "1.8 mi",
+    "participants": 4,
+    "maxParticipants": 7,
+    "time": "Sunday 09:00",
+    "description": "Join a paddle tennis meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "103",
+    "name": "Beach Volleyball Session",
+    "imageKey": "tennis",
+    "location": "Metro Athletic Club",
+    "distance": "2.1 mi",
+    "participants": 5,
+    "maxParticipants": 9,
+    "time": "Weeknights 20:00",
+    "description": "Join a beach volleyball meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Beach Volleyball Community Hub",
+        "location": "Metro Athletic Club - Zone 2",
+        "distance": "2.3 mi",
+        "time": "Today 18:00"
+      },
+      {
+        "clubName": "Beach Volleyball Training Grounds",
+        "location": "Metro Athletic Club - Zone 3",
+        "distance": "2.5 mi",
+        "time": "Today 19:00"
+      }
+    ]
+  },
+  {
+    "id": "104",
+    "name": "Beach Soccer Session",
+    "imageKey": "swimming",
+    "location": "Downtown Rec Center",
+    "distance": "2.4 mi",
+    "participants": 6,
+    "maxParticipants": 11,
+    "time": "Daily 06:00",
+    "description": "Join a beach soccer meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "105",
+    "name": "Flag Football Session",
+    "imageKey": "basketball",
+    "location": "Lakeside Arena",
+    "distance": "0.6 mi",
+    "participants": 7,
+    "maxParticipants": 13,
+    "time": "Today 18:00",
+    "description": "Join a flag football meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "106",
+    "name": "American Football Session",
+    "imageKey": "soccer",
+    "location": "Eastside Community Field",
+    "distance": "0.8 mi",
+    "participants": 8,
+    "maxParticipants": 15,
+    "time": "Today 19:00",
+    "description": "Join a american football meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "American Football Athletic Club",
+        "location": "Eastside Community Field - Zone 2",
+        "distance": "1.0 mi",
+        "time": "Tomorrow 20:00"
+      },
+      {
+        "clubName": "American Football Sports Center",
+        "location": "Eastside Community Field - Zone 3",
+        "distance": "1.2 mi",
+        "time": "Saturday 10:00"
+      }
+    ]
+  },
+  {
+    "id": "107",
+    "name": "Gaelic Football Session",
+    "imageKey": "tennis",
+    "location": "West End Gym",
+    "distance": "1.0 mi",
+    "participants": 9,
+    "maxParticipants": 17,
+    "time": "Tomorrow 18:00",
+    "description": "Join a gaelic football meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "108",
+    "name": "Hurling Session",
+    "imageKey": "swimming",
+    "location": "Harbor Activity Hub",
+    "distance": "1.2 mi",
+    "participants": 10,
+    "maxParticipants": 19,
+    "time": "Tomorrow 19:00",
+    "description": "Join a hurling meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  },
+  {
+    "id": "109",
+    "name": "Sepaktakraw Beach Session",
+    "imageKey": "basketball",
+    "location": "Northview Training Grounds",
+    "distance": "1.5 mi",
+    "participants": 11,
+    "maxParticipants": 21,
+    "time": "Saturday 10:00",
+    "description": "Join a sepaktakraw beach meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Sepaktakraw Beach Training Grounds",
+        "location": "Northview Training Grounds - Zone 2",
+        "distance": "1.7 mi",
+        "time": "Today 18:00"
+      },
+      {
+        "clubName": "Sepaktakraw Beach Arena",
+        "location": "Northview Training Grounds - Zone 3",
+        "distance": "1.9 mi",
+        "time": "Today 19:00"
+      }
+    ]
+  },
+  {
+    "id": "110",
+    "name": "Floorball Session",
+    "imageKey": "soccer",
+    "location": "Southside Fitness Hall",
+    "distance": "1.8 mi",
+    "participants": 12,
+    "maxParticipants": 23,
+    "time": "Sunday 09:00",
+    "description": "Join a floorball meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "111",
+    "name": "Streetball Session",
+    "imageKey": "tennis",
+    "location": "Central Park Courts",
+    "distance": "2.1 mi",
+    "participants": 13,
+    "maxParticipants": 15,
+    "time": "Weeknights 20:00",
+    "description": "Join a streetball meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": [
+      {
+        "clubName": "Streetball Athletic Club",
+        "location": "Central Park Courts - Zone 2",
+        "distance": "2.3 mi",
+        "time": "Tomorrow 18:00"
+      },
+      {
+        "clubName": "Streetball Sports Center",
+        "location": "Central Park Courts - Zone 3",
+        "distance": "2.5 mi",
+        "time": "Tomorrow 20:00"
+      },
+      {
+        "clubName": "Streetball Community Hub",
+        "location": "Central Park Courts - Zone 4",
+        "distance": "2.7 mi",
+        "time": "Saturday 10:00"
+      }
+    ]
+  },
+  {
+    "id": "112",
+    "name": "Futsal Session",
+    "imageKey": "swimming",
+    "location": "Riverside Sports Complex",
+    "distance": "2.4 mi",
+    "participants": 14,
+    "maxParticipants": 17,
+    "time": "Daily 06:00",
+    "description": "Join a futsal meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Beginner",
+    "nearbyClubs": [
+      {
+        "clubName": "Futsal Sports Center",
+        "location": "Riverside Sports Complex - Zone 2",
+        "distance": "2.6 mi",
+        "time": "Tomorrow 20:00"
+      },
+      {
+        "clubName": "Futsal Community Hub",
+        "location": "Riverside Sports Complex - Zone 3",
+        "distance": "2.8 mi",
+        "time": "Saturday 10:00"
+      }
+    ]
+  },
+  {
+    "id": "113",
+    "name": "E-Sports Conditioning Session",
+    "imageKey": "basketball",
+    "location": "Metro Athletic Club",
+    "distance": "0.6 mi",
+    "participants": 1,
+    "maxParticipants": 5,
+    "time": "Today 18:00",
+    "description": "Join a e-sports conditioning meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Intermediate",
+    "nearbyClubs": []
+  },
+  {
+    "id": "114",
+    "name": "Rowing Erg Challenge Session",
+    "imageKey": "soccer",
+    "location": "Downtown Rec Center",
+    "distance": "0.8 mi",
+    "participants": 2,
+    "maxParticipants": 7,
+    "time": "Today 19:00",
+    "description": "Join a rowing erg challenge meetup focused on skill-building, good energy, and local community play.",
+    "difficulty": "Advanced",
+    "nearbyClubs": []
+  }
+]
