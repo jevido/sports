@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "name": "Basketball Session",
+    "name": "Basketball",
     "imageKey": "basketball",
     "location": "Central Park Courts",
     "distance": "0.6 mi",
@@ -27,7 +27,7 @@
   },
   {
     "id": "2",
-    "name": "Soccer Session",
+    "name": "Soccer",
     "imageKey": "soccer",
     "location": "Riverside Sports Complex",
     "distance": "0.8 mi",
@@ -40,7 +40,7 @@
   },
   {
     "id": "3",
-    "name": "Tennis Session",
+    "name": "Tennis",
     "imageKey": "tennis",
     "location": "Metro Athletic Club",
     "distance": "1.0 mi",
@@ -53,7 +53,7 @@
   },
   {
     "id": "4",
-    "name": "Swimming Session",
+    "name": "Swimming",
     "imageKey": "swimming",
     "location": "Downtown Rec Center",
     "distance": "1.2 mi",
@@ -79,7 +79,7 @@
   },
   {
     "id": "5",
-    "name": "Capoeira Session",
+    "name": "Capoeira",
     "imageKey": "basketball",
     "location": "Lakeside Arena",
     "distance": "1.5 mi",
@@ -92,7 +92,7 @@
   },
   {
     "id": "6",
-    "name": "Volleyball Session",
+    "name": "Volleyball",
     "imageKey": "soccer",
     "location": "Eastside Community Field",
     "distance": "1.8 mi",
@@ -124,7 +124,7 @@
   },
   {
     "id": "7",
-    "name": "Baseball Session",
+    "name": "Baseball",
     "imageKey": "tennis",
     "location": "West End Gym",
     "distance": "2.1 mi",
@@ -150,7 +150,7 @@
   },
   {
     "id": "8",
-    "name": "Softball Session",
+    "name": "Softball",
     "imageKey": "swimming",
     "location": "Harbor Activity Hub",
     "distance": "2.4 mi",
@@ -163,7 +163,7 @@
   },
   {
     "id": "9",
-    "name": "Rugby Session",
+    "name": "Rugby",
     "imageKey": "basketball",
     "location": "Northview Training Grounds",
     "distance": "0.6 mi",
@@ -176,7 +176,7 @@
   },
   {
     "id": "10",
-    "name": "Cricket Session",
+    "name": "Cricket",
     "imageKey": "soccer",
     "location": "Southside Fitness Hall",
     "distance": "0.8 mi",
@@ -202,7 +202,7 @@
   },
   {
     "id": "11",
-    "name": "Field Hockey Session",
+    "name": "Field Hockey",
     "imageKey": "tennis",
     "location": "Central Park Courts",
     "distance": "1.0 mi",
@@ -234,7 +234,7 @@
   },
   {
     "id": "12",
-    "name": "Ice Hockey Session",
+    "name": "Ice Hockey",
     "imageKey": "swimming",
     "location": "Riverside Sports Complex",
     "distance": "1.2 mi",
@@ -247,7 +247,7 @@
   },
   {
     "id": "13",
-    "name": "Lacrosse Session",
+    "name": "Lacrosse",
     "imageKey": "basketball",
     "location": "Metro Athletic Club",
     "distance": "1.5 mi",
@@ -273,7 +273,7 @@
   },
   {
     "id": "14",
-    "name": "Handball Session",
+    "name": "Handball",
     "imageKey": "soccer",
     "location": "Downtown Rec Center",
     "distance": "1.8 mi",
@@ -286,7 +286,7 @@
   },
   {
     "id": "15",
-    "name": "Water Polo Session",
+    "name": "Water Polo",
     "imageKey": "tennis",
     "location": "Lakeside Arena",
     "distance": "2.1 mi",
@@ -299,7 +299,7 @@
   },
   {
     "id": "16",
-    "name": "Badminton Session",
+    "name": "Badminton",
     "imageKey": "swimming",
     "location": "Eastside Community Field",
     "distance": "2.4 mi",
@@ -325,7 +325,7 @@
   },
   {
     "id": "17",
-    "name": "Table Tennis Session",
+    "name": "Table Tennis",
     "imageKey": "basketball",
     "location": "West End Gym",
     "distance": "0.6 mi",
@@ -338,7 +338,7 @@
   },
   {
     "id": "18",
-    "name": "Squash Session",
+    "name": "Squash",
     "imageKey": "soccer",
     "location": "Harbor Activity Hub",
     "distance": "0.8 mi",
@@ -351,7 +351,7 @@
   },
   {
     "id": "19",
-    "name": "Racquetball Session",
+    "name": "Racquetball",
     "imageKey": "tennis",
     "location": "Northview Training Grounds",
     "distance": "1.0 mi",
@@ -377,7 +377,7 @@
   },
   {
     "id": "20",
-    "name": "Pickleball Session",
+    "name": "Pickleball",
     "imageKey": "swimming",
     "location": "Southside Fitness Hall",
     "distance": "1.2 mi",
@@ -390,7 +390,7 @@
   },
   {
     "id": "21",
-    "name": "Archery Session",
+    "name": "Archery",
     "imageKey": "basketball",
     "location": "Central Park Courts",
     "distance": "1.5 mi",
@@ -422,7 +422,7 @@
   },
   {
     "id": "22",
-    "name": "Fencing Session",
+    "name": "Fencing",
     "imageKey": "soccer",
     "location": "Riverside Sports Complex",
     "distance": "1.8 mi",
@@ -448,7 +448,7 @@
   },
   {
     "id": "23",
-    "name": "Boxing Session",
+    "name": "Boxing",
     "imageKey": "tennis",
     "location": "Metro Athletic Club",
     "distance": "2.1 mi",
@@ -461,7 +461,7 @@
   },
   {
     "id": "24",
-    "name": "Kickboxing Session",
+    "name": "Kickboxing",
     "imageKey": "swimming",
     "location": "Downtown Rec Center",
     "distance": "2.4 mi",
@@ -474,7 +474,7 @@
   },
   {
     "id": "25",
-    "name": "Muay Thai Session",
+    "name": "Muay Thai",
     "imageKey": "basketball",
     "location": "Lakeside Arena",
     "distance": "0.6 mi",
@@ -500,7 +500,7 @@
   },
   {
     "id": "26",
-    "name": "Judo Session",
+    "name": "Judo",
     "imageKey": "soccer",
     "location": "Eastside Community Field",
     "distance": "0.8 mi",
@@ -532,7 +532,7 @@
   },
   {
     "id": "27",
-    "name": "Karate Session",
+    "name": "Karate",
     "imageKey": "tennis",
     "location": "West End Gym",
     "distance": "1.0 mi",
@@ -545,7 +545,7 @@
   },
   {
     "id": "28",
-    "name": "Taekwondo Session",
+    "name": "Taekwondo",
     "imageKey": "swimming",
     "location": "Harbor Activity Hub",
     "distance": "1.2 mi",
@@ -571,7 +571,7 @@
   },
   {
     "id": "29",
-    "name": "Brazilian Jiu-Jitsu Session",
+    "name": "Brazilian Jiu-Jitsu",
     "imageKey": "basketball",
     "location": "Northview Training Grounds",
     "distance": "1.5 mi",
@@ -584,7 +584,7 @@
   },
   {
     "id": "30",
-    "name": "Wrestling Session",
+    "name": "Wrestling",
     "imageKey": "soccer",
     "location": "Southside Fitness Hall",
     "distance": "1.8 mi",
@@ -597,7 +597,7 @@
   },
   {
     "id": "31",
-    "name": "MMA Session",
+    "name": "MMA",
     "imageKey": "tennis",
     "location": "Central Park Courts",
     "distance": "2.1 mi",
@@ -623,7 +623,7 @@
   },
   {
     "id": "32",
-    "name": "Aikido Session",
+    "name": "Aikido",
     "imageKey": "swimming",
     "location": "Riverside Sports Complex",
     "distance": "2.4 mi",
@@ -636,7 +636,7 @@
   },
   {
     "id": "33",
-    "name": "Kendo Session",
+    "name": "Kendo",
     "imageKey": "basketball",
     "location": "Metro Athletic Club",
     "distance": "0.6 mi",
@@ -649,7 +649,7 @@
   },
   {
     "id": "34",
-    "name": "Sambo Session",
+    "name": "Sambo",
     "imageKey": "soccer",
     "location": "Downtown Rec Center",
     "distance": "0.8 mi",
@@ -675,7 +675,7 @@
   },
   {
     "id": "35",
-    "name": "Sailing Session",
+    "name": "Sailing",
     "imageKey": "tennis",
     "location": "Lakeside Arena",
     "distance": "1.0 mi",
@@ -688,7 +688,7 @@
   },
   {
     "id": "36",
-    "name": "Rowing Session",
+    "name": "Rowing",
     "imageKey": "swimming",
     "location": "Eastside Community Field",
     "distance": "1.2 mi",
@@ -720,7 +720,7 @@
   },
   {
     "id": "37",
-    "name": "Canoeing Session",
+    "name": "Canoeing",
     "imageKey": "basketball",
     "location": "West End Gym",
     "distance": "1.5 mi",
@@ -746,7 +746,7 @@
   },
   {
     "id": "38",
-    "name": "Kayaking Session",
+    "name": "Kayaking",
     "imageKey": "soccer",
     "location": "Harbor Activity Hub",
     "distance": "1.8 mi",
@@ -759,7 +759,7 @@
   },
   {
     "id": "39",
-    "name": "Surfing Session",
+    "name": "Surfing",
     "imageKey": "tennis",
     "location": "Northview Training Grounds",
     "distance": "2.1 mi",
@@ -772,7 +772,7 @@
   },
   {
     "id": "40",
-    "name": "Windsurfing Session",
+    "name": "Windsurfing",
     "imageKey": "swimming",
     "location": "Southside Fitness Hall",
     "distance": "2.4 mi",
@@ -798,7 +798,7 @@
   },
   {
     "id": "41",
-    "name": "Kitesurfing Session",
+    "name": "Kitesurfing",
     "imageKey": "basketball",
     "location": "Central Park Courts",
     "distance": "0.6 mi",
@@ -830,7 +830,7 @@
   },
   {
     "id": "42",
-    "name": "Stand-Up Paddleboarding Session",
+    "name": "Stand-Up Paddleboarding",
     "imageKey": "soccer",
     "location": "Riverside Sports Complex",
     "distance": "0.8 mi",
@@ -843,7 +843,7 @@
   },
   {
     "id": "43",
-    "name": "Diving Session",
+    "name": "Diving",
     "imageKey": "tennis",
     "location": "Metro Athletic Club",
     "distance": "1.0 mi",
@@ -869,7 +869,7 @@
   },
   {
     "id": "44",
-    "name": "Triathlon Session",
+    "name": "Triathlon",
     "imageKey": "swimming",
     "location": "Downtown Rec Center",
     "distance": "1.2 mi",
@@ -882,7 +882,7 @@
   },
   {
     "id": "45",
-    "name": "Duathlon Session",
+    "name": "Duathlon",
     "imageKey": "basketball",
     "location": "Lakeside Arena",
     "distance": "1.5 mi",
@@ -895,7 +895,7 @@
   },
   {
     "id": "46",
-    "name": "Cycling Session",
+    "name": "Cycling",
     "imageKey": "soccer",
     "location": "Eastside Community Field",
     "distance": "1.8 mi",
@@ -921,7 +921,7 @@
   },
   {
     "id": "47",
-    "name": "Mountain Biking Session",
+    "name": "Mountain Biking",
     "imageKey": "tennis",
     "location": "West End Gym",
     "distance": "2.1 mi",
@@ -934,7 +934,7 @@
   },
   {
     "id": "48",
-    "name": "BMX Session",
+    "name": "BMX",
     "imageKey": "swimming",
     "location": "Harbor Activity Hub",
     "distance": "2.4 mi",
@@ -947,7 +947,7 @@
   },
   {
     "id": "49",
-    "name": "Track Cycling Session",
+    "name": "Track Cycling",
     "imageKey": "basketball",
     "location": "Northview Training Grounds",
     "distance": "0.6 mi",
@@ -973,7 +973,7 @@
   },
   {
     "id": "50",
-    "name": "Skateboarding Session",
+    "name": "Skateboarding",
     "imageKey": "soccer",
     "location": "Southside Fitness Hall",
     "distance": "0.8 mi",
@@ -986,7 +986,7 @@
   },
   {
     "id": "51",
-    "name": "Longboarding Session",
+    "name": "Longboarding",
     "imageKey": "tennis",
     "location": "Central Park Courts",
     "distance": "1.0 mi",
@@ -1018,7 +1018,7 @@
   },
   {
     "id": "52",
-    "name": "Roller Derby Session",
+    "name": "Roller Derby",
     "imageKey": "swimming",
     "location": "Riverside Sports Complex",
     "distance": "1.2 mi",
@@ -1044,7 +1044,7 @@
   },
   {
     "id": "53",
-    "name": "Inline Skating Session",
+    "name": "Inline Skating",
     "imageKey": "basketball",
     "location": "Metro Athletic Club",
     "distance": "1.5 mi",
@@ -1057,7 +1057,7 @@
   },
   {
     "id": "54",
-    "name": "Speed Skating Session",
+    "name": "Speed Skating",
     "imageKey": "soccer",
     "location": "Downtown Rec Center",
     "distance": "1.8 mi",
@@ -1070,7 +1070,7 @@
   },
   {
     "id": "55",
-    "name": "Figure Skating Session",
+    "name": "Figure Skating",
     "imageKey": "tennis",
     "location": "Lakeside Arena",
     "distance": "2.1 mi",
@@ -1096,7 +1096,7 @@
   },
   {
     "id": "56",
-    "name": "Skiing Session",
+    "name": "Skiing",
     "imageKey": "swimming",
     "location": "Eastside Community Field",
     "distance": "2.4 mi",
@@ -1128,7 +1128,7 @@
   },
   {
     "id": "57",
-    "name": "Snowboarding Session",
+    "name": "Snowboarding",
     "imageKey": "basketball",
     "location": "West End Gym",
     "distance": "0.6 mi",
@@ -1141,7 +1141,7 @@
   },
   {
     "id": "58",
-    "name": "Cross-Country Skiing Session",
+    "name": "Cross-Country Skiing",
     "imageKey": "soccer",
     "location": "Harbor Activity Hub",
     "distance": "0.8 mi",
@@ -1167,7 +1167,7 @@
   },
   {
     "id": "59",
-    "name": "Biathlon Session",
+    "name": "Biathlon",
     "imageKey": "tennis",
     "location": "Northview Training Grounds",
     "distance": "1.0 mi",
@@ -1180,7 +1180,7 @@
   },
   {
     "id": "60",
-    "name": "Bobsleigh Session",
+    "name": "Bobsleigh",
     "imageKey": "swimming",
     "location": "Southside Fitness Hall",
     "distance": "1.2 mi",
@@ -1193,7 +1193,7 @@
   },
   {
     "id": "61",
-    "name": "Luge Session",
+    "name": "Luge",
     "imageKey": "basketball",
     "location": "Central Park Courts",
     "distance": "1.5 mi",
@@ -1219,7 +1219,7 @@
   },
   {
     "id": "62",
-    "name": "Skeleton Session",
+    "name": "Skeleton",
     "imageKey": "soccer",
     "location": "Riverside Sports Complex",
     "distance": "1.8 mi",
@@ -1232,7 +1232,7 @@
   },
   {
     "id": "63",
-    "name": "Curling Session",
+    "name": "Curling",
     "imageKey": "tennis",
     "location": "Metro Athletic Club",
     "distance": "2.1 mi",
@@ -1245,7 +1245,7 @@
   },
   {
     "id": "64",
-    "name": "Rock Climbing Session",
+    "name": "Rock Climbing",
     "imageKey": "swimming",
     "location": "Downtown Rec Center",
     "distance": "2.4 mi",
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "65",
-    "name": "Bouldering Session",
+    "name": "Bouldering",
     "imageKey": "basketball",
     "location": "Lakeside Arena",
     "distance": "0.6 mi",
@@ -1284,7 +1284,7 @@
   },
   {
     "id": "66",
-    "name": "Mountaineering Session",
+    "name": "Mountaineering",
     "imageKey": "soccer",
     "location": "Eastside Community Field",
     "distance": "0.8 mi",
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "67",
-    "name": "Trail Running Session",
+    "name": "Trail Running",
     "imageKey": "tennis",
     "location": "West End Gym",
     "distance": "1.0 mi",
@@ -1342,7 +1342,7 @@
   },
   {
     "id": "68",
-    "name": "Marathon Running Session",
+    "name": "Marathon Running",
     "imageKey": "swimming",
     "location": "Harbor Activity Hub",
     "distance": "1.2 mi",
@@ -1355,7 +1355,7 @@
   },
   {
     "id": "69",
-    "name": "Sprint Training Session",
+    "name": "Sprint Training",
     "imageKey": "basketball",
     "location": "Northview Training Grounds",
     "distance": "1.5 mi",
@@ -1368,7 +1368,7 @@
   },
   {
     "id": "70",
-    "name": "Obstacle Course Racing Session",
+    "name": "Obstacle Course Racing",
     "imageKey": "soccer",
     "location": "Southside Fitness Hall",
     "distance": "1.8 mi",
@@ -1394,7 +1394,7 @@
   },
   {
     "id": "71",
-    "name": "Parkour Session",
+    "name": "Parkour",
     "imageKey": "tennis",
     "location": "Central Park Courts",
     "distance": "2.1 mi",
@@ -1426,7 +1426,7 @@
   },
   {
     "id": "72",
-    "name": "Ultimate Frisbee Session",
+    "name": "Ultimate Frisbee",
     "imageKey": "swimming",
     "location": "Riverside Sports Complex",
     "distance": "2.4 mi",
@@ -1439,7 +1439,7 @@
   },
   {
     "id": "73",
-    "name": "Disc Golf Session",
+    "name": "Disc Golf",
     "imageKey": "basketball",
     "location": "Metro Athletic Club",
     "distance": "0.6 mi",
@@ -1465,7 +1465,7 @@
   },
   {
     "id": "74",
-    "name": "Dodgeball Session",
+    "name": "Dodgeball",
     "imageKey": "soccer",
     "location": "Downtown Rec Center",
     "distance": "0.8 mi",
@@ -1478,7 +1478,7 @@
   },
   {
     "id": "75",
-    "name": "Netball Session",
+    "name": "Netball",
     "imageKey": "tennis",
     "location": "Lakeside Arena",
     "distance": "1.0 mi",
@@ -1491,7 +1491,7 @@
   },
   {
     "id": "76",
-    "name": "Sepak Takraw Session",
+    "name": "Sepak Takraw",
     "imageKey": "swimming",
     "location": "Eastside Community Field",
     "distance": "1.2 mi",
@@ -1517,7 +1517,7 @@
   },
   {
     "id": "77",
-    "name": "Kabaddi Session",
+    "name": "Kabaddi",
     "imageKey": "basketball",
     "location": "West End Gym",
     "distance": "1.5 mi",
@@ -1530,7 +1530,7 @@
   },
   {
     "id": "78",
-    "name": "Polo Session",
+    "name": "Polo",
     "imageKey": "soccer",
     "location": "Harbor Activity Hub",
     "distance": "1.8 mi",
@@ -1543,7 +1543,7 @@
   },
   {
     "id": "79",
-    "name": "Equestrian Jumping Session",
+    "name": "Equestrian Jumping",
     "imageKey": "tennis",
     "location": "Northview Training Grounds",
     "distance": "2.1 mi",
@@ -1569,7 +1569,7 @@
   },
   {
     "id": "80",
-    "name": "Dressage Session",
+    "name": "Dressage",
     "imageKey": "swimming",
     "location": "Southside Fitness Hall",
     "distance": "2.4 mi",
@@ -1582,7 +1582,7 @@
   },
   {
     "id": "81",
-    "name": "Gymnastics Session",
+    "name": "Gymnastics",
     "imageKey": "basketball",
     "location": "Central Park Courts",
     "distance": "0.6 mi",
@@ -1614,7 +1614,7 @@
   },
   {
     "id": "82",
-    "name": "Rhythmic Gymnastics Session",
+    "name": "Rhythmic Gymnastics",
     "imageKey": "soccer",
     "location": "Riverside Sports Complex",
     "distance": "0.8 mi",
@@ -1640,7 +1640,7 @@
   },
   {
     "id": "83",
-    "name": "Trampoline Session",
+    "name": "Trampoline",
     "imageKey": "tennis",
     "location": "Metro Athletic Club",
     "distance": "1.0 mi",
@@ -1653,7 +1653,7 @@
   },
   {
     "id": "84",
-    "name": "Powerlifting Session",
+    "name": "Powerlifting",
     "imageKey": "swimming",
     "location": "Downtown Rec Center",
     "distance": "1.2 mi",
@@ -1666,7 +1666,7 @@
   },
   {
     "id": "85",
-    "name": "Weightlifting Session",
+    "name": "Weightlifting",
     "imageKey": "basketball",
     "location": "Lakeside Arena",
     "distance": "1.5 mi",
@@ -1692,7 +1692,7 @@
   },
   {
     "id": "86",
-    "name": "Strongman Session",
+    "name": "Strongman",
     "imageKey": "soccer",
     "location": "Eastside Community Field",
     "distance": "1.8 mi",
@@ -1724,7 +1724,7 @@
   },
   {
     "id": "87",
-    "name": "CrossFit Session",
+    "name": "CrossFit",
     "imageKey": "tennis",
     "location": "West End Gym",
     "distance": "2.1 mi",
@@ -1737,7 +1737,7 @@
   },
   {
     "id": "88",
-    "name": "Calisthenics Session",
+    "name": "Calisthenics",
     "imageKey": "swimming",
     "location": "Harbor Activity Hub",
     "distance": "2.4 mi",
@@ -1763,7 +1763,7 @@
   },
   {
     "id": "89",
-    "name": "Yoga Session",
+    "name": "Yoga",
     "imageKey": "basketball",
     "location": "Northview Training Grounds",
     "distance": "0.6 mi",
@@ -1776,7 +1776,7 @@
   },
   {
     "id": "90",
-    "name": "Pilates Session",
+    "name": "Pilates",
     "imageKey": "soccer",
     "location": "Southside Fitness Hall",
     "distance": "0.8 mi",
@@ -1789,7 +1789,7 @@
   },
   {
     "id": "91",
-    "name": "Dance Fitness Session",
+    "name": "Dance Fitness",
     "imageKey": "tennis",
     "location": "Central Park Courts",
     "distance": "1.0 mi",
@@ -1815,7 +1815,7 @@
   },
   {
     "id": "92",
-    "name": "Zumba Session",
+    "name": "Zumba",
     "imageKey": "swimming",
     "location": "Riverside Sports Complex",
     "distance": "1.2 mi",
@@ -1828,7 +1828,7 @@
   },
   {
     "id": "93",
-    "name": "Aerobics Session",
+    "name": "Aerobics",
     "imageKey": "basketball",
     "location": "Metro Athletic Club",
     "distance": "1.5 mi",
@@ -1841,7 +1841,7 @@
   },
   {
     "id": "94",
-    "name": "Orienteering Session",
+    "name": "Orienteering",
     "imageKey": "soccer",
     "location": "Downtown Rec Center",
     "distance": "1.8 mi",
@@ -1867,7 +1867,7 @@
   },
   {
     "id": "95",
-    "name": "Geocaching Adventure Run Session",
+    "name": "Geocaching Adventure Run",
     "imageKey": "tennis",
     "location": "Lakeside Arena",
     "distance": "2.1 mi",
@@ -1880,7 +1880,7 @@
   },
   {
     "id": "96",
-    "name": "Bowling Session",
+    "name": "Bowling",
     "imageKey": "swimming",
     "location": "Eastside Community Field",
     "distance": "2.4 mi",
@@ -1912,7 +1912,7 @@
   },
   {
     "id": "97",
-    "name": "Billiards Session",
+    "name": "Billiards",
     "imageKey": "basketball",
     "location": "West End Gym",
     "distance": "0.6 mi",
@@ -1938,7 +1938,7 @@
   },
   {
     "id": "98",
-    "name": "Snooker Session",
+    "name": "Snooker",
     "imageKey": "soccer",
     "location": "Harbor Activity Hub",
     "distance": "0.8 mi",
@@ -1951,7 +1951,7 @@
   },
   {
     "id": "99",
-    "name": "Darts Session",
+    "name": "Darts",
     "imageKey": "tennis",
     "location": "Northview Training Grounds",
     "distance": "1.0 mi",
@@ -1964,7 +1964,7 @@
   },
   {
     "id": "100",
-    "name": "Chess Boxing Session",
+    "name": "Chess Boxing",
     "imageKey": "swimming",
     "location": "Southside Fitness Hall",
     "distance": "1.2 mi",
@@ -1990,7 +1990,7 @@
   },
   {
     "id": "101",
-    "name": "Dragon Boat Session",
+    "name": "Dragon Boat",
     "imageKey": "basketball",
     "location": "Central Park Courts",
     "distance": "1.5 mi",
@@ -2022,7 +2022,7 @@
   },
   {
     "id": "102",
-    "name": "Paddle Tennis Session",
+    "name": "Paddle Tennis",
     "imageKey": "soccer",
     "location": "Riverside Sports Complex",
     "distance": "1.8 mi",
@@ -2035,7 +2035,7 @@
   },
   {
     "id": "103",
-    "name": "Beach Volleyball Session",
+    "name": "Beach Volleyball",
     "imageKey": "tennis",
     "location": "Metro Athletic Club",
     "distance": "2.1 mi",
@@ -2061,7 +2061,7 @@
   },
   {
     "id": "104",
-    "name": "Beach Soccer Session",
+    "name": "Beach Soccer",
     "imageKey": "swimming",
     "location": "Downtown Rec Center",
     "distance": "2.4 mi",
@@ -2074,7 +2074,7 @@
   },
   {
     "id": "105",
-    "name": "Flag Football Session",
+    "name": "Flag Football",
     "imageKey": "basketball",
     "location": "Lakeside Arena",
     "distance": "0.6 mi",
@@ -2087,7 +2087,7 @@
   },
   {
     "id": "106",
-    "name": "American Football Session",
+    "name": "American Football",
     "imageKey": "soccer",
     "location": "Eastside Community Field",
     "distance": "0.8 mi",
@@ -2113,7 +2113,7 @@
   },
   {
     "id": "107",
-    "name": "Gaelic Football Session",
+    "name": "Gaelic Football",
     "imageKey": "tennis",
     "location": "West End Gym",
     "distance": "1.0 mi",
@@ -2126,7 +2126,7 @@
   },
   {
     "id": "108",
-    "name": "Hurling Session",
+    "name": "Hurling",
     "imageKey": "swimming",
     "location": "Harbor Activity Hub",
     "distance": "1.2 mi",
@@ -2139,7 +2139,7 @@
   },
   {
     "id": "109",
-    "name": "Sepaktakraw Beach Session",
+    "name": "Sepaktakraw Beach",
     "imageKey": "basketball",
     "location": "Northview Training Grounds",
     "distance": "1.5 mi",
@@ -2165,7 +2165,7 @@
   },
   {
     "id": "110",
-    "name": "Floorball Session",
+    "name": "Floorball",
     "imageKey": "soccer",
     "location": "Southside Fitness Hall",
     "distance": "1.8 mi",
@@ -2178,7 +2178,7 @@
   },
   {
     "id": "111",
-    "name": "Streetball Session",
+    "name": "Streetball",
     "imageKey": "tennis",
     "location": "Central Park Courts",
     "distance": "2.1 mi",
@@ -2210,7 +2210,7 @@
   },
   {
     "id": "112",
-    "name": "Futsal Session",
+    "name": "Futsal",
     "imageKey": "swimming",
     "location": "Riverside Sports Complex",
     "distance": "2.4 mi",
@@ -2236,7 +2236,7 @@
   },
   {
     "id": "113",
-    "name": "E-Sports Conditioning Session",
+    "name": "E-Sports Conditioning",
     "imageKey": "basketball",
     "location": "Metro Athletic Club",
     "distance": "0.6 mi",
@@ -2249,7 +2249,7 @@
   },
   {
     "id": "114",
-    "name": "Rowing Erg Challenge Session",
+    "name": "Rowing Erg Challenge",
     "imageKey": "soccer",
     "location": "Downtown Rec Center",
     "distance": "0.8 mi",
