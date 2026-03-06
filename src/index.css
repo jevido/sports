@@ -47,13 +47,42 @@
     --neon-surface: 225 20% 15%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(225 25% 8%), hsl(260 30% 15%), hsl(225 25% 8%));
-    --gradient-card: linear-gradient(145deg, hsl(225 20% 14%), hsl(225 20% 10%));
-    --gradient-accept: linear-gradient(135deg, hsl(85 90% 55%), hsl(140 80% 45%));
-    --gradient-reject: linear-gradient(135deg, hsl(0 85% 55%), hsl(340 80% 50%));
-    --gradient-primary: linear-gradient(135deg, hsl(185 100% 50%), hsl(195 100% 60%));
-    --gradient-neon: linear-gradient(135deg, hsl(185 100% 50%), hsl(320 90% 60%));
-    --gradient-quiz: linear-gradient(135deg, hsl(260 80% 50%), hsl(320 90% 60%));
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(225 25% 8%),
+      hsl(260 30% 15%),
+      hsl(225 25% 8%)
+    );
+    --gradient-card: linear-gradient(
+      145deg,
+      hsl(225 20% 14%),
+      hsl(225 20% 10%)
+    );
+    --gradient-accept: linear-gradient(
+      135deg,
+      hsl(85 90% 55%),
+      hsl(140 80% 45%)
+    );
+    --gradient-reject: linear-gradient(
+      135deg,
+      hsl(0 85% 55%),
+      hsl(340 80% 50%)
+    );
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(185 100% 50%),
+      hsl(195 100% 60%)
+    );
+    --gradient-neon: linear-gradient(
+      135deg,
+      hsl(185 100% 50%),
+      hsl(320 90% 60%)
+    );
+    --gradient-quiz: linear-gradient(
+      135deg,
+      hsl(260 80% 50%),
+      hsl(320 90% 60%)
+    );
 
     /* Shadows */
     --shadow-card: 0 4px 30px -4px hsl(0 0% 0% / 0.5);
@@ -90,9 +119,13 @@
 
 /* Neon text glow utility */
 .text-glow {
-  text-shadow: 0 0 20px hsl(185 100% 50% / 0.5), 0 0 40px hsl(185 100% 50% / 0.3);
+  text-shadow:
+    0 0 20px hsl(185 100% 50% / 0.5),
+    0 0 40px hsl(185 100% 50% / 0.3);
 }
 
 .text-glow-magenta {
-  text-shadow: 0 0 20px hsl(320 90% 60% / 0.5), 0 0 40px hsl(320 90% 60% / 0.3);
+  text-shadow:
+    0 0 20px hsl(320 90% 60% / 0.5),
+    0 0 40px hsl(320 90% 60% / 0.3);
 }

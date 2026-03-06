@@ -13,7 +13,7 @@ const QUIZ_SCHEMA = {
   experience: ["beginner", "intermediate", "advanced"],
   impact: ["low", "medium", "high"],
   budget: ["low", "medium", "high"],
-  goal: ["fitness", "social", "competition"]
+  goal: ["fitness", "social", "competition"],
 };
 
 let dbPromise;
@@ -21,7 +21,8 @@ let dbPromise;
 async function getDb() {
   if (!dbPromise) {
     dbPromise = (async () => {
-      const dbPath = env.SQLITE_PATH || join(process.cwd(), "data", "sports.sqlite");
+      const dbPath =
+        env.SQLITE_PATH || join(process.cwd(), "data", "sports.sqlite");
       mkdirSync(dirname(dbPath), { recursive: true });
 
       let db;
@@ -38,9 +39,9 @@ async function getDb() {
             return {
               all: (...params) => statement.all(...params),
               get: (...params) => statement.get(...params),
-              run: (...params) => statement.run(...params)
+              run: (...params) => statement.run(...params),
             };
-          }
+          },
         };
       }
 
@@ -173,7 +174,7 @@ const listSportProfiles = (db) =>
     .query(
       `SELECT sport_name, description, difficulty, answers_mode_json, updated_at
        FROM sport_profiles
-       ORDER BY updated_at DESC`
+       ORDER BY updated_at DESC`,
     )
     .all()
     .map((row) => ({
@@ -181,7 +182,7 @@ const listSportProfiles = (db) =>
       description: row.description,
       difficulty: row.difficulty,
       recommendedAnswers: JSON.parse(row.answers_mode_json),
-      updatedAt: row.updated_at
+      updatedAt: row.updated_at,
     }));
 
 const listSportClubs = (db) =>
@@ -189,7 +190,7 @@ const listSportClubs = (db) =>
     .query(
       `SELECT id, sport_name, club_name, location, distance, time, created_at
        FROM sport_clubs
-       ORDER BY created_at DESC`
+       ORDER BY created_at DESC`,
     )
     .all()
     .map((row) => ({
@@ -199,19 +200,22 @@ const listSportClubs = (db) =>
       location: row.location,
       distance: row.distance,
       time: row.time,
-      createdAt: row.created_at
+      createdAt: row.created_at,
     }));
 
 const mergeIntoProfile = (db, submission) => {
   const existing = db
-    .query("SELECT description, difficulty, votes_json FROM sport_profiles WHERE sport_name = ?")
+    .query(
+      "SELECT description, difficulty, votes_json FROM sport_profiles WHERE sport_name = ?",
+    )
     .get(submission.sportName);
 
   const existingVotes = existing ? JSON.parse(existing.votes_json) : {};
   const votes = incrementVotes(existingVotes, submission.answers);
   const modeAnswers = computeModeAnswers(votes);
 
-  db.query(`
+  db.query(
+    `
     INSERT INTO sport_profiles (sport_name, description, difficulty, votes_json, answers_mode_json, updated_at)
     VALUES (?, ?, ?, ?, ?, CURRENT_TIMESTAMP)
     ON CONFLICT(sport_name)
@@ -221,12 +225,13 @@ const mergeIntoProfile = (db, submission) => {
       votes_json = excluded.votes_json,
       answers_mode_json = excluded.answers_mode_json,
       updated_at = CURRENT_TIMESTAMP
-  `).run(
+  `,
+  ).run(
     submission.sportName,
     submission.description || existing?.description || "",
     submission.difficulty || existing?.difficulty || "Intermediate",
     JSON.stringify(votes),
-    JSON.stringify(modeAnswers)
+    JSON.stringify(modeAnswers),
   );
 };
 
@@ -240,14 +245,20 @@ const handleGet = async ({ request, url, segments }) => {
   if (segments[0] === "sport-clubs" && segments.length === 1) {
     const sportName = String(url.searchParams.get("sportName") || "").trim();
     const clubs = sportName
-      ? listSportClubs(db).filter((club) => club.sportName.toLowerCase() === sportName.toLowerCase())
+      ? listSportClubs(db).filter(
+          (club) => club.sportName.toLowerCase() === sportName.toLowerCase(),
+        )
       : listSportClubs(db);
     return json({ clubs });
   }
 
   if (segments[0] === "admin" && !isAdmin(request)) return unauthorized();
 
-  if (segments[0] === "admin" && segments[1] === "submissions" && segments.length === 2) {
+  if (
+    segments[0] === "admin" &&
+    segments[1] === "submissions" &&
+    segments.length === 2
+  ) {
     const status = url.searchParams.get("status") || "pending";
     if (!["pending", "approved", "rejected"].includes(status)) {
       return badRequest("Invalid status filter.");
@@ -258,7 +269,7 @@ const handleGet = async ({ request, url, segments }) => {
         `SELECT id, sport_name, description, difficulty, answers_json, status, created_at, reviewed_at, review_note
          FROM sport_submissions
          WHERE status = ?
-         ORDER BY created_at ASC`
+         ORDER BY created_at ASC`,
       )
       .all(status);
 
@@ -272,12 +283,16 @@ const handleGet = async ({ request, url, segments }) => {
         status: row.status,
         createdAt: row.created_at,
         reviewedAt: row.reviewed_at,
-        reviewNote: row.review_note
-      }))
+        reviewNote: row.review_note,
+      })),
     });
   }
 
-  if (segments[0] === "admin" && segments[1] === "club-submissions" && segments.length === 2) {
+  if (
+    segments[0] === "admin" &&
+    segments[1] === "club-submissions" &&
+    segments.length === 2
+  ) {
     const status = url.searchParams.get("status") || "pending";
     if (!["pending", "approved", "rejected"].includes(status)) {
       return badRequest("Invalid status filter.");
@@ -288,7 +303,7 @@ const handleGet = async ({ request, url, segments }) => {
         `SELECT id, sport_name, club_name, location, distance, time, status, created_at, reviewed_at, review_note
          FROM club_submissions
          WHERE status = ?
-         ORDER BY created_at ASC`
+         ORDER BY created_at ASC`,
       )
       .all(status);
 
@@ -303,16 +318,24 @@ const handleGet = async ({ request, url, segments }) => {
         status: row.status,
         createdAt: row.created_at,
         reviewedAt: row.reviewed_at,
-        reviewNote: row.review_note
-      }))
+        reviewNote: row.review_note,
+      })),
     });
   }
 
-  if (segments[0] === "admin" && segments[1] === "sport-profiles" && segments.length === 2) {
+  if (
+    segments[0] === "admin" &&
+    segments[1] === "sport-profiles" &&
+    segments.length === 2
+  ) {
     return json({ profiles: listSportProfiles(db) });
   }
 
-  if (segments[0] === "admin" && segments[1] === "sport-clubs" && segments.length === 2) {
+  if (
+    segments[0] === "admin" &&
+    segments[1] === "sport-clubs" &&
+    segments.length === 2
+  ) {
     return json({ clubs: listSportClubs(db) });
   }
 
@@ -335,7 +358,9 @@ const handlePost = async ({ request, segments }) => {
       return badRequest("Sport name must be between 2 and 80 characters.");
     }
     if (!["Beginner", "Intermediate", "Advanced"].includes(difficulty)) {
-      return badRequest("Difficulty must be Beginner, Intermediate, or Advanced.");
+      return badRequest(
+        "Difficulty must be Beginner, Intermediate, or Advanced.",
+      );
     }
 
     const answerError = validateAnswers(answers);
@@ -343,7 +368,7 @@ const handlePost = async ({ request, segments }) => {
 
     const result = db
       .query(
-        "INSERT INTO sport_submissions (sport_name, description, difficulty, answers_json, status) VALUES (?, ?, ?, ?, 'pending')"
+        "INSERT INTO sport_submissions (sport_name, description, difficulty, answers_json, status) VALUES (?, ?, ?, ?, 'pending')",
       )
       .run(sportName, description, difficulty, JSON.stringify(answers));
 
@@ -373,7 +398,7 @@ const handlePost = async ({ request, segments }) => {
     const result = db
       .query(
         `INSERT INTO club_submissions (sport_name, club_name, location, distance, time, status)
-         VALUES (?, ?, ?, ?, ?, 'pending')`
+         VALUES (?, ?, ?, ?, ?, 'pending')`,
       )
       .run(sportName, clubName, location, distance, time);
 
@@ -382,9 +407,14 @@ const handlePost = async ({ request, segments }) => {
 
   if (segments[0] === "admin" && !isAdmin(request)) return unauthorized();
 
-  if (segments[0] === "admin" && segments[1] === "submissions" && segments[3] === "review") {
+  if (
+    segments[0] === "admin" &&
+    segments[1] === "submissions" &&
+    segments[3] === "review"
+  ) {
     const submissionId = Number(segments[2]);
-    if (!Number.isInteger(submissionId)) return badRequest("Invalid submission id.");
+    if (!Number.isInteger(submissionId))
+      return badRequest("Invalid submission id.");
 
     const body = await parseBody(request);
     if (!body) return badRequest("Invalid JSON body.");
@@ -395,32 +425,39 @@ const handlePost = async ({ request, segments }) => {
     }
 
     const row = db
-      .query("SELECT id, sport_name, description, difficulty, answers_json, status FROM sport_submissions WHERE id = ?")
+      .query(
+        "SELECT id, sport_name, description, difficulty, answers_json, status FROM sport_submissions WHERE id = ?",
+      )
       .get(submissionId);
 
     if (!row) return json({ error: "Submission not found." }, { status: 404 });
-    if (row.status !== "pending") return badRequest("Submission already reviewed.");
+    if (row.status !== "pending")
+      return badRequest("Submission already reviewed.");
 
     if (action === "approve") {
       mergeIntoProfile(db, {
         sportName: row.sport_name,
         description: row.description,
         difficulty: row.difficulty,
-        answers: JSON.parse(row.answers_json)
+        answers: JSON.parse(row.answers_json),
       });
     }
 
-    db.query("UPDATE sport_submissions SET status = ?, reviewed_at = CURRENT_TIMESTAMP WHERE id = ?").run(
-      action === "approve" ? "approved" : "rejected",
-      submissionId
-    );
+    db.query(
+      "UPDATE sport_submissions SET status = ?, reviewed_at = CURRENT_TIMESTAMP WHERE id = ?",
+    ).run(action === "approve" ? "approved" : "rejected", submissionId);
 
     return json({ ok: true });
   }
 
-  if (segments[0] === "admin" && segments[1] === "club-submissions" && segments[3] === "review") {
+  if (
+    segments[0] === "admin" &&
+    segments[1] === "club-submissions" &&
+    segments[3] === "review"
+  ) {
     const submissionId = Number(segments[2]);
-    if (!Number.isInteger(submissionId)) return badRequest("Invalid club submission id.");
+    if (!Number.isInteger(submissionId))
+      return badRequest("Invalid club submission id.");
 
     const body = await parseBody(request);
     if (!body) return badRequest("Invalid JSON body.");
@@ -431,26 +468,30 @@ const handlePost = async ({ request, segments }) => {
     }
 
     const row = db
-      .query(`SELECT id, sport_name, club_name, location, distance, time, status FROM club_submissions WHERE id = ?`)
+      .query(
+        `SELECT id, sport_name, club_name, location, distance, time, status FROM club_submissions WHERE id = ?`,
+      )
       .get(submissionId);
 
     if (!row) return json({ error: "Submission not found." }, { status: 404 });
-    if (row.status !== "pending") return badRequest("Submission already reviewed.");
+    if (row.status !== "pending")
+      return badRequest("Submission already reviewed.");
 
     if (action === "approve") {
-      db.query("INSERT INTO sport_clubs (sport_name, club_name, location, distance, time) VALUES (?, ?, ?, ?, ?)").run(
+      db.query(
+        "INSERT INTO sport_clubs (sport_name, club_name, location, distance, time) VALUES (?, ?, ?, ?, ?)",
+      ).run(
         row.sport_name,
         row.club_name,
         row.location,
         row.distance,
-        row.time
+        row.time,
       );
     }
 
-    db.query("UPDATE club_submissions SET status = ?, reviewed_at = CURRENT_TIMESTAMP WHERE id = ?").run(
-      action === "approve" ? "approved" : "rejected",
-      submissionId
-    );
+    db.query(
+      "UPDATE club_submissions SET status = ?, reviewed_at = CURRENT_TIMESTAMP WHERE id = ?",
+    ).run(action === "approve" ? "approved" : "rejected", submissionId);
 
     return json({ ok: true });
   }
@@ -468,45 +509,65 @@ const handlePut = async ({ request, segments }) => {
     if (!currentSportName) return badRequest("Invalid sport name in URL.");
 
     const existing = db
-      .query("SELECT sport_name, description, difficulty, answers_mode_json FROM sport_profiles WHERE sport_name = ?")
+      .query(
+        "SELECT sport_name, description, difficulty, answers_mode_json FROM sport_profiles WHERE sport_name = ?",
+      )
       .get(currentSportName);
-    if (!existing) return json({ error: "Sport profile not found." }, { status: 404 });
+    if (!existing)
+      return json({ error: "Sport profile not found." }, { status: 404 });
 
     const body = await parseBody(request);
     if (!body) return badRequest("Invalid JSON body.");
 
     const nextSportName = String(body.sportName || currentSportName).trim();
-    const nextDescription = String(body.description ?? existing.description ?? "").trim();
-    const nextDifficulty = String(body.difficulty || existing.difficulty).trim();
-    const nextRecommendedAnswers = body.recommendedAnswers ?? JSON.parse(existing.answers_mode_json);
+    const nextDescription = String(
+      body.description ?? existing.description ?? "",
+    ).trim();
+    const nextDifficulty = String(
+      body.difficulty || existing.difficulty,
+    ).trim();
+    const nextRecommendedAnswers =
+      body.recommendedAnswers ?? JSON.parse(existing.answers_mode_json);
 
     if (nextSportName.length < 2 || nextSportName.length > 80) {
       return badRequest("Sport name must be between 2 and 80 characters.");
     }
     if (!["Beginner", "Intermediate", "Advanced"].includes(nextDifficulty)) {
-      return badRequest("Difficulty must be Beginner, Intermediate, or Advanced.");
+      return badRequest(
+        "Difficulty must be Beginner, Intermediate, or Advanced.",
+      );
     }
     const answersError = validateAnswers(nextRecommendedAnswers);
     if (answersError) return badRequest(answersError);
 
     if (currentSportName.toLowerCase() !== nextSportName.toLowerCase()) {
       const conflict = db
-        .query("SELECT sport_name FROM sport_profiles WHERE lower(sport_name) = lower(?)")
+        .query(
+          "SELECT sport_name FROM sport_profiles WHERE lower(sport_name) = lower(?)",
+        )
         .get(nextSportName);
-      if (conflict) return badRequest("Another sport profile already uses this sport name.");
+      if (conflict)
+        return badRequest(
+          "Another sport profile already uses this sport name.",
+        );
     }
 
     db.query(
       `UPDATE sport_profiles
        SET sport_name = ?, description = ?, difficulty = ?, answers_mode_json = ?, updated_at = CURRENT_TIMESTAMP
-       WHERE sport_name = ?`
-    ).run(nextSportName, nextDescription, nextDifficulty, JSON.stringify(nextRecommendedAnswers), currentSportName);
+       WHERE sport_name = ?`,
+    ).run(
+      nextSportName,
+      nextDescription,
+      nextDifficulty,
+      JSON.stringify(nextRecommendedAnswers),
+      currentSportName,
+    );
 
     if (currentSportName.toLowerCase() !== nextSportName.toLowerCase()) {
-      db.query("UPDATE sport_clubs SET sport_name = ? WHERE lower(sport_name) = lower(?)").run(
-        nextSportName,
-        currentSportName
-      );
+      db.query(
+        "UPDATE sport_clubs SET sport_name = ? WHERE lower(sport_name) = lower(?)",
+      ).run(nextSportName, currentSportName);
     }
 
     return json({ ok: true, profiles: listSportProfiles(db) });
@@ -516,7 +577,9 @@ const handlePut = async ({ request, segments }) => {
     const clubId = Number(segments[2]);
     if (!Number.isInteger(clubId)) return badRequest("Invalid club id.");
 
-    const existing = db.query("SELECT id FROM sport_clubs WHERE id = ?").get(clubId);
+    const existing = db
+      .query("SELECT id FROM sport_clubs WHERE id = ?")
+      .get(clubId);
     if (!existing) return json({ error: "Club not found." }, { status: 404 });
 
     const body = await parseBody(request);
@@ -541,7 +604,7 @@ const handlePut = async ({ request, segments }) => {
     db.query(
       `UPDATE sport_clubs
        SET sport_name = ?, club_name = ?, location = ?, distance = ?, time = ?
-       WHERE id = ?`
+       WHERE id = ?`,
     ).run(sportName, clubName, location, distance, time, clubId);
 
     return json({ ok: true, clubs: listSportClubs(db) });
@@ -560,9 +623,15 @@ const handleDelete = async ({ request, segments }) => {
     if (!sportName) return badRequest("Invalid sport name in URL.");
 
     db.query("DELETE FROM sport_profiles WHERE sport_name = ?").run(sportName);
-    db.query("DELETE FROM sport_clubs WHERE lower(sport_name) = lower(?)").run(sportName);
+    db.query("DELETE FROM sport_clubs WHERE lower(sport_name) = lower(?)").run(
+      sportName,
+    );
 
-    return json({ ok: true, profiles: listSportProfiles(db), clubs: listSportClubs(db) });
+    return json({
+      ok: true,
+      profiles: listSportProfiles(db),
+      clubs: listSportClubs(db),
+    });
   }
 
   if (segments[1] === "sport-clubs" && segments[2]) {
@@ -598,8 +667,8 @@ export const OPTIONS = async () =>
     headers: {
       "access-control-allow-origin": env.CORS_ORIGIN || "*",
       "access-control-allow-methods": "GET,POST,PUT,DELETE,OPTIONS",
-      "access-control-allow-headers": "Content-Type,x-admin-token"
-    }
+      "access-control-allow-headers": "Content-Type,x-admin-token",
+    },
   });
 
 export const GET = async (event) => route(event, "GET");

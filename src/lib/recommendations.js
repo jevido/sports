@@ -14,7 +14,7 @@ const TEAM_SPORTS = [
   "futsal",
   "netball",
   "football",
-  "kabaddi"
+  "kabaddi",
 ];
 
 const WATER_SPORTS = [
@@ -29,7 +29,7 @@ const WATER_SPORTS = [
   "windsurfing",
   "kitesurfing",
   "paddleboarding",
-  "dragon boat"
+  "dragon boat",
 ];
 
 const PRECISION_SPORTS = [
@@ -40,7 +40,7 @@ const PRECISION_SPORTS = [
   "fencing",
   "billiards",
   "snooker",
-  "darts"
+  "darts",
 ];
 
 const POWER_SPORTS = [
@@ -53,7 +53,7 @@ const POWER_SPORTS = [
   "weightlifting",
   "strongman",
   "crossfit",
-  "rugby"
+  "rugby",
 ];
 
 const SPEED_SPORTS = [
@@ -63,7 +63,7 @@ const SPEED_SPORTS = [
   "speed skating",
   "bmx",
   "futsal",
-  "skateboarding"
+  "skateboarding",
 ];
 
 const LOW_IMPACT_SPORTS = [
@@ -73,7 +73,7 @@ const LOW_IMPACT_SPORTS = [
   "rowing",
   "sailing",
   "table tennis",
-  "archery"
+  "archery",
 ];
 
 const SOCIAL_SPORTS = [
@@ -84,7 +84,7 @@ const SOCIAL_SPORTS = [
   "ultimate frisbee",
   "dance",
   "dragon boat",
-  "beach volleyball"
+  "beach volleyball",
 ];
 
 function includesAny(name, terms) {
@@ -99,7 +99,8 @@ function getPrimarySportName(answers) {
   if (impact === "low" && goal === "fitness") return "Yoga";
   if (vibe === "precision" && social === "solo") return "Archery";
   if (vibe === "precision" && compete === "moderate") return "Tennis";
-  if (energy === "high" && social === "team" && compete === "intense") return "Basketball";
+  if (energy === "high" && social === "team" && compete === "intense")
+    return "Basketball";
   if (energy === "high" && social === "team") return "Soccer";
   if (energy === "high" && vibe === "power") return "Boxing";
   if (energy === "high" && vibe === "speed") return "Track";
@@ -113,7 +114,10 @@ function scoreFromCommunityVotes(answers, profile) {
   let matchedCriteria = 0;
 
   for (const [questionId, answer] of Object.entries(answers)) {
-    if (recommendedAnswers[questionId] && recommendedAnswers[questionId] === answer) {
+    if (
+      recommendedAnswers[questionId] &&
+      recommendedAnswers[questionId] === answer
+    ) {
       score += 4;
       matchedCriteria += 1;
     }
@@ -122,7 +126,12 @@ function scoreFromCommunityVotes(answers, profile) {
   return { score, matchedCriteria };
 }
 
-export function getRecommendedSports(answers, sports, limit = 24, communityProfiles = []) {
+export function getRecommendedSports(
+  answers,
+  sports,
+  limit = 24,
+  communityProfiles = [],
+) {
   const primary = getPrimarySportName(answers).toLowerCase();
 
   const activeCriteria = [
@@ -135,18 +144,29 @@ export function getRecommendedSports(answers, sports, limit = 24, communityProfi
     { points: 4, enabled: answers.vibe === "speed" },
     { points: 4, enabled: answers.impact === "low" },
     { points: 3, enabled: answers.goal === "social" },
-    { points: 2, enabled: answers.goal === "competition" && answers.compete === "intense" },
+    {
+      points: 2,
+      enabled: answers.goal === "competition" && answers.compete === "intense",
+    },
     { points: 3, enabled: answers.experience === "beginner" },
     { points: 3, enabled: answers.experience === "intermediate" },
     { points: 3, enabled: answers.experience === "advanced" },
     { points: 2, enabled: answers.energy === "high" },
-    { points: 2, enabled: answers.energy === "low" }
+    { points: 2, enabled: answers.energy === "low" },
   ];
 
-  const enabledCriteria = activeCriteria.filter((criterion) => criterion.enabled);
-  const totalPossibleScore = enabledCriteria.reduce((sum, criterion) => sum + criterion.points, 0);
+  const enabledCriteria = activeCriteria.filter(
+    (criterion) => criterion.enabled,
+  );
+  const totalPossibleScore = enabledCriteria.reduce(
+    (sum, criterion) => sum + criterion.points,
+    0,
+  );
   const minScore = Math.max(5, Math.ceil(totalPossibleScore * 0.35));
-  const minCriteriaMatches = Math.max(2, Math.ceil(enabledCriteria.length * 0.35));
+  const minCriteriaMatches = Math.max(
+    2,
+    Math.ceil(enabledCriteria.length * 0.35),
+  );
 
   const builtInScored = sports.map((sport, index) => {
     const name = sport.name.toLowerCase();
@@ -201,7 +221,10 @@ export function getRecommendedSports(answers, sports, limit = 24, communityProfi
       score += 3;
       matchedCriteria += 1;
     }
-    if (answers.experience === "intermediate" && sport.difficulty === "Intermediate") {
+    if (
+      answers.experience === "intermediate" &&
+      sport.difficulty === "Intermediate"
+    ) {
       score += 3;
       matchedCriteria += 1;
     }
@@ -222,12 +245,15 @@ export function getRecommendedSports(answers, sports, limit = 24, communityProfi
   });
 
   const communityScored = communityProfiles.map((profile, index) => {
-    const { score, matchedCriteria } = scoreFromCommunityVotes(answers, profile);
+    const { score, matchedCriteria } = scoreFromCommunityVotes(
+      answers,
+      profile,
+    );
     return {
       sport: profile.sport,
       score,
       matchedCriteria,
-      index: sports.length + index
+      index: sports.length + index,
     };
   });
 
@@ -239,11 +265,13 @@ export function getRecommendedSports(answers, sports, limit = 24, communityProfi
   });
 
   const strongMatches = scored.filter(
-    (item) => item.score >= minScore && item.matchedCriteria >= minCriteriaMatches
+    (item) =>
+      item.score >= minScore && item.matchedCriteria >= minCriteriaMatches,
   );
-  const results = (strongMatches.length > 0
-    ? strongMatches
-    : scored.filter((item) => item.score > 0)
+  const results = (
+    strongMatches.length > 0
+      ? strongMatches
+      : scored.filter((item) => item.score > 0)
   ).slice(0, limit);
 
   return results.map((item) => item.sport);

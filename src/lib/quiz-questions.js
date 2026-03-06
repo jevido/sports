@@ -6,8 +6,8 @@ export const quizQuestions = [
     options: [
       { label: "Calm and steady sessions", value: "low", emoji: "🧘" },
       { label: "Short intense bursts", value: "medium", emoji: "🔥" },
-      { label: "Full-throttle action", value: "high", emoji: "💥" }
-    ]
+      { label: "Full-throttle action", value: "high", emoji: "💥" },
+    ],
   },
   {
     id: "social",
@@ -16,8 +16,8 @@ export const quizQuestions = [
     options: [
       { label: "Mostly solo", value: "solo", emoji: "🎯" },
       { label: "Small supportive group", value: "small", emoji: "🤝" },
-      { label: "Large team environment", value: "team", emoji: "🏟️" }
-    ]
+      { label: "Large team environment", value: "team", emoji: "🏟️" },
+    ],
   },
   {
     id: "setting",
@@ -26,8 +26,8 @@ export const quizQuestions = [
     options: [
       { label: "Indoor facilities", value: "indoor", emoji: "🏢" },
       { label: "Outdoor spaces", value: "outdoor", emoji: "🌳" },
-      { label: "In or on the water", value: "water", emoji: "🌊" }
-    ]
+      { label: "In or on the water", value: "water", emoji: "🌊" },
+    ],
   },
   {
     id: "compete",
@@ -36,8 +36,8 @@ export const quizQuestions = [
     options: [
       { label: "Mostly fun and social", value: "casual", emoji: "😄" },
       { label: "Some friendly rivalry", value: "moderate", emoji: "😏" },
-      { label: "High-stakes competition", value: "intense", emoji: "😤" }
-    ]
+      { label: "High-stakes competition", value: "intense", emoji: "😤" },
+    ],
   },
   {
     id: "schedule",
@@ -46,8 +46,8 @@ export const quizQuestions = [
     options: [
       { label: "Quick 30-minute sessions", value: "short", emoji: "⚡" },
       { label: "1-2 focused hours", value: "medium", emoji: "🕐" },
-      { label: "Long sessions (half-day+)", value: "long", emoji: "☀️" }
-    ]
+      { label: "Long sessions (half-day+)", value: "long", emoji: "☀️" },
+    ],
   },
   {
     id: "vibe",
@@ -56,8 +56,8 @@ export const quizQuestions = [
     options: [
       { label: "Precision and control", value: "precision", emoji: "🎯" },
       { label: "Strength and power", value: "power", emoji: "💪" },
-      { label: "Speed and agility", value: "speed", emoji: "⚡" }
-    ]
+      { label: "Speed and agility", value: "speed", emoji: "⚡" },
+    ],
   },
   {
     id: "experience",
@@ -66,8 +66,8 @@ export const quizQuestions = [
     options: [
       { label: "Just getting started", value: "beginner", emoji: "🌱" },
       { label: "I have some experience", value: "intermediate", emoji: "🏃" },
-      { label: "Experienced and confident", value: "advanced", emoji: "🏆" }
-    ]
+      { label: "Experienced and confident", value: "advanced", emoji: "🏆" },
+    ],
   },
   {
     id: "impact",
@@ -76,8 +76,8 @@ export const quizQuestions = [
     options: [
       { label: "Low impact and joint-friendly", value: "low", emoji: "🧘" },
       { label: "Moderate impact", value: "medium", emoji: "🚶" },
-      { label: "High impact and explosive", value: "high", emoji: "💥" }
-    ]
+      { label: "High impact and explosive", value: "high", emoji: "💥" },
+    ],
   },
   {
     id: "budget",
@@ -86,8 +86,8 @@ export const quizQuestions = [
     options: [
       { label: "Low ($0-$75)", value: "low", emoji: "🪙" },
       { label: "Medium ($75-$300)", value: "medium", emoji: "💳" },
-      { label: "High ($300+)", value: "high", emoji: "💎" }
-    ]
+      { label: "High ($300+)", value: "high", emoji: "💎" },
+    ],
   },
   {
     id: "goal",
@@ -96,7 +96,11 @@ export const quizQuestions = [
     options: [
       { label: "Build fitness and health", value: "fitness", emoji: "❤️" },
       { label: "Meet people and community", value: "social", emoji: "🤝" },
-      { label: "Train and compete seriously", value: "competition", emoji: "🥇" }
-    ]
-  }
+      {
+        label: "Train and compete seriously",
+        value: "competition",
+        emoji: "🥇",
+      },
+    ],
+  },
 ];
