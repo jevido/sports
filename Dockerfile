@@ -13,8 +13,8 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV PORT=3000
 
-COPY --from=build /app/build ./build
-COPY --from=build /app/server.js ./server.js
+COPY --from=builder /app/build ./build
+COPY --from=builder /app/server.js ./server.js
 
 EXPOSE 3000
 CMD ["bun", "server.js"]
