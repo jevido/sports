@@ -107,36 +107,144 @@ function getPrimarySportName(answers) {
   return "Cycling";
 }
 
-export function getRecommendedSports(answers, sports, limit = 24) {
+function scoreFromCommunityVotes(answers, profile) {
+  const recommendedAnswers = profile?.recommendedAnswers ?? {};
+  let score = 0;
+  let matchedCriteria = 0;
+
+  for (const [questionId, answer] of Object.entries(answers)) {
+    if (recommendedAnswers[questionId] && recommendedAnswers[questionId] === answer) {
+      score += 4;
+      matchedCriteria += 1;
+    }
+  }
+
+  return { score, matchedCriteria };
+}
+
+export function getRecommendedSports(answers, sports, limit = 24, communityProfiles = []) {
   const primary = getPrimarySportName(answers).toLowerCase();
 
-  const scored = sports.map((sport, index) => {
+  const activeCriteria = [
+    { points: 10, enabled: true },
+    { points: 4, enabled: answers.social === "team" },
+    { points: 2, enabled: answers.social === "solo" },
+    { points: 5, enabled: answers.setting === "water" },
+    { points: 4, enabled: answers.vibe === "precision" },
+    { points: 4, enabled: answers.vibe === "power" },
+    { points: 4, enabled: answers.vibe === "speed" },
+    { points: 4, enabled: answers.impact === "low" },
+    { points: 3, enabled: answers.goal === "social" },
+    { points: 2, enabled: answers.goal === "competition" && answers.compete === "intense" },
+    { points: 3, enabled: answers.experience === "beginner" },
+    { points: 3, enabled: answers.experience === "intermediate" },
+    { points: 3, enabled: answers.experience === "advanced" },
+    { points: 2, enabled: answers.energy === "high" },
+    { points: 2, enabled: answers.energy === "low" }
+  ];
+
+  const enabledCriteria = activeCriteria.filter((criterion) => criterion.enabled);
+  const totalPossibleScore = enabledCriteria.reduce((sum, criterion) => sum + criterion.points, 0);
+  const minScore = Math.max(5, Math.ceil(totalPossibleScore * 0.35));
+  const minCriteriaMatches = Math.max(2, Math.ceil(enabledCriteria.length * 0.35));
+
+  const builtInScored = sports.map((sport, index) => {
     const name = sport.name.toLowerCase();
     let score = 0;
+    let matchedCriteria = 0;
 
-    if (name.includes(primary)) score += 10;
-    if (answers.social === "team" && includesAny(name, TEAM_SPORTS)) score += 4;
-    if (answers.social === "solo" && !includesAny(name, TEAM_SPORTS)) score += 2;
-    if (answers.setting === "water" && includesAny(name, WATER_SPORTS)) score += 5;
-    if (answers.vibe === "precision" && includesAny(name, PRECISION_SPORTS)) score += 4;
-    if (answers.vibe === "power" && includesAny(name, POWER_SPORTS)) score += 4;
-    if (answers.vibe === "speed" && includesAny(name, SPEED_SPORTS)) score += 4;
-    if (answers.impact === "low" && includesAny(name, LOW_IMPACT_SPORTS)) score += 4;
-    if (answers.goal === "social" && includesAny(name, SOCIAL_SPORTS)) score += 3;
-    if (answers.goal === "competition" && answers.compete === "intense") score += 2;
-    if (answers.experience === "beginner" && sport.difficulty === "Beginner") score += 3;
-    if (answers.experience === "intermediate" && sport.difficulty === "Intermediate") score += 3;
-    if (answers.experience === "advanced" && sport.difficulty === "Advanced") score += 3;
-    if (answers.energy === "high" && sport.difficulty !== "Beginner") score += 2;
-    if (answers.energy === "low" && sport.difficulty === "Beginner") score += 2;
+    if (name.includes(primary)) {
+      score += 10;
+      matchedCriteria += 1;
+    }
+    if (answers.social === "team" && includesAny(name, TEAM_SPORTS)) {
+      score += 4;
+      matchedCriteria += 1;
+    }
+    if (answers.social === "solo" && !includesAny(name, TEAM_SPORTS)) {
+      score += 2;
+      matchedCriteria += 1;
+    }
+    if (answers.setting === "water" && includesAny(name, WATER_SPORTS)) {
+      score += 5;
+      matchedCriteria += 1;
+    }
+    if (answers.vibe === "precision" && includesAny(name, PRECISION_SPORTS)) {
+      score += 4;
+      matchedCriteria += 1;
+    }
+    if (answers.vibe === "power" && includesAny(name, POWER_SPORTS)) {
+      score += 4;
+      matchedCriteria += 1;
+    }
+    if (answers.vibe === "speed" && includesAny(name, SPEED_SPORTS)) {
+      score += 4;
+      matchedCriteria += 1;
+    }
+    if (answers.impact === "low" && includesAny(name, LOW_IMPACT_SPORTS)) {
+      score += 4;
+      matchedCriteria += 1;
+    }
+    if (answers.goal === "social" && includesAny(name, SOCIAL_SPORTS)) {
+      score += 3;
+      matchedCriteria += 1;
+    }
+    if (
+      answers.goal === "competition" &&
+      answers.compete === "intense" &&
+      sport.difficulty !== "Beginner"
+    ) {
+      score += 2;
+      matchedCriteria += 1;
+    }
+    if (answers.experience === "beginner" && sport.difficulty === "Beginner") {
+      score += 3;
+      matchedCriteria += 1;
+    }
+    if (answers.experience === "intermediate" && sport.difficulty === "Intermediate") {
+      score += 3;
+      matchedCriteria += 1;
+    }
+    if (answers.experience === "advanced" && sport.difficulty === "Advanced") {
+      score += 3;
+      matchedCriteria += 1;
+    }
+    if (answers.energy === "high" && sport.difficulty !== "Beginner") {
+      score += 2;
+      matchedCriteria += 1;
+    }
+    if (answers.energy === "low" && sport.difficulty === "Beginner") {
+      score += 2;
+      matchedCriteria += 1;
+    }
 
-    return { sport, score, index };
+    return { sport, score, matchedCriteria, index };
   });
+
+  const communityScored = communityProfiles.map((profile, index) => {
+    const { score, matchedCriteria } = scoreFromCommunityVotes(answers, profile);
+    return {
+      sport: profile.sport,
+      score,
+      matchedCriteria,
+      index: sports.length + index
+    };
+  });
+
+  const scored = [...builtInScored, ...communityScored];
 
   scored.sort((a, b) => {
     if (b.score !== a.score) return b.score - a.score;
     return a.index - b.index;
   });
 
-  return scored.slice(0, limit).map((item) => item.sport);
+  const strongMatches = scored.filter(
+    (item) => item.score >= minScore && item.matchedCriteria >= minCriteriaMatches
+  );
+  const results = (strongMatches.length > 0
+    ? strongMatches
+    : scored.filter((item) => item.score > 0)
+  ).slice(0, limit);
+
+  return results.map((item) => item.sport);
 }

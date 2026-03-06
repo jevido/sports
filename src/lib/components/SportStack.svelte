@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from "svelte";
   import SportCard from "@/lib/components/SportCard.svelte";
   import { Button } from "@/lib/components/ui/button";
   import { RotateCcw } from "lucide-svelte";
@@ -8,6 +9,7 @@
   import tennisImage from "@/assets/tennis-card.jpg";
   import swimmingImage from "@/assets/swimming-card.jpg";
   import sportsData from "@/lib/data/sports.json";
+  import { apiFetch } from "@/lib/api";
   export let sportsInput = [];
 
   const imageMap = {
@@ -26,14 +28,65 @@
   let currentIndex = 0;
   let matches = [];
   let lastSignature = "";
+  let submittedClubsBySport = {};
+
+  const normalizeSport = (value) => String(value || "").trim().toLowerCase();
+
+  const mergeNearbyClubs = (existingClubs = [], submittedClubs = []) => {
+    const unique = new Map();
+    const combined = [...existingClubs, ...submittedClubs];
+
+    for (const club of combined) {
+      const key = `${String(club.clubName || "").toLowerCase()}::${String(club.location || "").toLowerCase()}`;
+      if (!unique.has(key)) {
+        unique.set(key, {
+          clubName: club.clubName || "Unnamed Club",
+          location: club.location || "Unknown location",
+          distance: club.distance || "N/A",
+          time: club.time || "Schedule not provided"
+        });
+      }
+    }
+
+    return Array.from(unique.values());
+  };
+
+  onMount(async () => {
+    try {
+      const response = await apiFetch("/api/sport-clubs");
+      if (!response.ok) return;
+      const payload = await response.json();
+      const clubs = Array.isArray(payload?.clubs) ? payload.clubs : [];
+
+      const grouped = {};
+      for (const club of clubs) {
+        const key = normalizeSport(club.sportName);
+        if (!grouped[key]) grouped[key] = [];
+        grouped[key].push({
+          clubName: club.clubName,
+          location: club.location,
+          distance: club.distance || "N/A",
+          time: club.time || "Schedule not provided"
+        });
+      }
+
+      submittedClubsBySport = grouped;
+    } catch {
+      submittedClubsBySport = {};
+    }
+  });
 
   $: incomingSports = Array.isArray(sportsInput) && sportsInput.length > 0
     ? sportsInput
     : sportsData;
-  $: sports = incomingSports.map((sport) => ({
-    ...sport,
-    image: imageMap[sport.imageKey] ?? basketballImage
-  }));
+  $: sports = incomingSports.map((sport) => {
+    const submittedClubs = submittedClubsBySport[normalizeSport(sport.name)] || [];
+    return {
+      ...sport,
+      nearbyClubs: mergeNearbyClubs(sport.nearbyClubs || [], submittedClubs),
+      image: imageMap[sport.imageKey] ?? basketballImage
+    };
+  });
   $: signature = sports.map((sport) => sport.id).join(",");
   $: if (signature !== lastSignature) {
     lastSignature = signature;

@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite dev",
+    "dev": "bash -lc 'PORT=3001 bun --watch server.js & API_PID=$!; trap \"kill $API_PID\" EXIT; vite dev'",
+    "dev:web": "vite dev",
+    "dev:api": "PORT=3001 bun --watch server.js",
     "build": "vite build",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check"

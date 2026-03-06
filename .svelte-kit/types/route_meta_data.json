@@ -3,6 +3,12 @@
 		"src/routes/+layout.js",
 		"src/routes/+layout.js"
 	],
+	"/admin": [
+		"src/routes/+layout.js"
+	],
+	"/submit": [
+		"src/routes/+layout.js"
+	],
 	"/[...path]": [
 		"src/routes/[...path]/+page.js",
 		"src/routes/+layout.js"

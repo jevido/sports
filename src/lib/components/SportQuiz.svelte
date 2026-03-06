@@ -1,113 +1,13 @@
 <script>
+  import { onMount } from "svelte";
   import { ChevronLeft, RotateCcw } from "lucide-svelte";
   import { Button } from "@/lib/components/ui/button";
   import { cn } from "@/lib/utils";
   import SportStack from "@/lib/components/SportStack.svelte";
   import sportsData from "@/lib/data/sports.json";
   import { getRecommendedSports } from "@/lib/recommendations";
-
-  const questions = [
-    {
-      id: "energy",
-      question: "What's your energy like?",
-      emoji: "⚡",
-      options: [
-        { label: "Chill & steady", value: "low", emoji: "🧘" },
-        { label: "Bursts of intensity", value: "medium", emoji: "🔥" },
-        { label: "Non-stop action", value: "high", emoji: "💥" }
-      ]
-    },
-    {
-      id: "social",
-      question: "Lone wolf or pack animal?",
-      emoji: "🐺",
-      options: [
-        { label: "Solo missions", value: "solo", emoji: "🎯" },
-        { label: "Small squad", value: "small", emoji: "🤝" },
-        { label: "Big team energy", value: "team", emoji: "🏟️" }
-      ]
-    },
-    {
-      id: "setting",
-      question: "Where do you thrive?",
-      emoji: "🌍",
-      options: [
-        { label: "Indoors", value: "indoor", emoji: "🏢" },
-        { label: "Outdoors", value: "outdoor", emoji: "🌳" },
-        { label: "Water", value: "water", emoji: "🌊" }
-      ]
-    },
-    {
-      id: "compete",
-      question: "How competitive are you?",
-      emoji: "🏆",
-      options: [
-        { label: "Just for fun", value: "casual", emoji: "😄" },
-        { label: "Friendly rivalry", value: "moderate", emoji: "😏" },
-        { label: "I play to win", value: "intense", emoji: "😤" }
-      ]
-    },
-    {
-      id: "schedule",
-      question: "How much time can you commit per week?",
-      emoji: "⏰",
-      options: [
-        { label: "30 min sessions", value: "short", emoji: "⚡" },
-        { label: "1-2 hours", value: "medium", emoji: "🕐" },
-        { label: "Half day+", value: "long", emoji: "☀️" }
-      ]
-    },
-    {
-      id: "vibe",
-      question: "Pick a vibe:",
-      emoji: "🎵",
-      options: [
-        { label: "Graceful & precise", value: "precision", emoji: "🎯" },
-        { label: "Raw power", value: "power", emoji: "💪" },
-        { label: "Speed & agility", value: "speed", emoji: "⚡" }
-      ]
-    },
-    {
-      id: "experience",
-      question: "What's your current fitness level?",
-      emoji: "📈",
-      options: [
-        { label: "Total beginner", value: "beginner", emoji: "🌱" },
-        { label: "Some practice", value: "intermediate", emoji: "🏃" },
-        { label: "Very experienced", value: "advanced", emoji: "🏆" }
-      ]
-    },
-    {
-      id: "impact",
-      question: "How much impact do you want?",
-      emoji: "🦵",
-      options: [
-        { label: "Low impact", value: "low", emoji: "🧘" },
-        { label: "Moderate", value: "medium", emoji: "🚶" },
-        { label: "High impact", value: "high", emoji: "💥" }
-      ]
-    },
-    {
-      id: "budget",
-      question: "What's your gear budget?",
-      emoji: "💸",
-      options: [
-        { label: "Keep it cheap", value: "low", emoji: "🪙" },
-        { label: "Mid-range is fine", value: "medium", emoji: "💳" },
-        { label: "No real limit", value: "high", emoji: "💎" }
-      ]
-    },
-    {
-      id: "goal",
-      question: "Your main goal right now?",
-      emoji: "🎯",
-      options: [
-        { label: "Get fitter", value: "fitness", emoji: "❤️" },
-        { label: "Make friends", value: "social", emoji: "🤝" },
-        { label: "Compete hard", value: "competition", emoji: "🥇" }
-      ]
-    }
-  ];
+  import { quizQuestions as questions } from "@/lib/quiz-questions";
+  import { apiFetch } from "@/lib/api";
 
   let currentStep = 0;
   let answers = {};
@@ -115,6 +15,38 @@
   let showRecommendations = false;
   let animating = false;
   let recommendedSports = [];
+  let communityProfiles = [];
+
+  const createCommunitySport = (profile, index) => ({
+    id: `community-${profile.sportName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${index}`,
+    name: profile.sportName,
+    imageKey: "basketball",
+    location: "Community Submitted",
+    distance: "N/A",
+    participants: 1,
+    maxParticipants: 10,
+    time: "Flexible",
+    description:
+      profile.description?.trim() ||
+      "Community-submitted sport profile curated by quiz voters.",
+    difficulty: profile.difficulty || "Intermediate",
+    nearbyClubs: []
+  });
+
+  onMount(async () => {
+    try {
+      const response = await apiFetch("/api/community-sports");
+      if (!response.ok) return;
+      const payload = await response.json();
+      const profiles = Array.isArray(payload?.sports) ? payload.sports : [];
+      communityProfiles = profiles.map((profile, index) => ({
+        sport: createCommunitySport(profile, index),
+        recommendedAnswers: profile.recommendedAnswers || {}
+      }));
+    } catch {
+      communityProfiles = [];
+    }
+  });
 
   $: currentQuestion = questions[currentStep];
   $: progress = (currentStep / questions.length) * 100;
@@ -135,7 +67,7 @@
       } else {
         showRecommendations = true;
         selectedOption = null;
-        recommendedSports = getRecommendedSports(newAnswers, sportsData, 30);
+        recommendedSports = getRecommendedSports(newAnswers, sportsData, 24, communityProfiles);
       }
       animating = false;
     }, 220);
@@ -250,6 +182,12 @@
           <RotateCcw size={18} />
           Retake Quiz
         </Button>
+      </div>
+      <div class="text-center text-sm text-muted-foreground">
+        Know a sport missing from this list?
+        <a href="/submit" class="text-primary font-semibold hover:underline">Submit it</a>
+        or
+        <a href="/admin" class="text-primary font-semibold hover:underline">moderate submissions</a>.
       </div>
     </div>
   {/if}

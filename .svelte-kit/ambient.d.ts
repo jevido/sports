@@ -93,7 +93,6 @@ declare module '$env/static/private' {
 	export const __MISE_DIFF: string;
 	export const GIT_ASKPASS: string;
 	export const XDG_SEAT_PATH: string;
-	export const INVOCATION_ID: string;
 	export const MANAGERPID: string;
 	export const GOROOT: string;
 	export const BAT_THEME: string;
@@ -114,7 +113,6 @@ declare module '$env/static/private' {
 	export const TERMINFO: string;
 	export const TERM: string;
 	export const npm_package_name: string;
-	export const CHROME_WRAPPER: string;
 	export const USER: string;
 	export const SDL_VIDEODRIVER: string;
 	export const SUDO_EDITOR: string;
@@ -127,7 +125,6 @@ declare module '$env/static/private' {
 	export const SHLVL: string;
 	export const MOZ_ENABLE_WAYLAND: string;
 	export const GOENV_ROOT: string;
-	export const INSIDE_NAUTILUS_PYTHON: string;
 	export const QT_IM_MODULE: string;
 	export const XDG_VTNR: string;
 	export const XDG_SESSION_ID: string;
@@ -141,9 +138,7 @@ declare module '$env/static/private' {
 	export const npm_package_json: string;
 	export const DOCKER_HOST: string;
 	export const BUN_INSTALL: string;
-	export const MM_NOTTTY: string;
 	export const VSCODE_GIT_ASKPASS_MAIN: string;
-	export const JOURNAL_STREAM: string;
 	export const MISE_SHELL: string;
 	export const XDG_DATA_DIRS: string;
 	export const GDK_BACKEND: string;
@@ -156,10 +151,7 @@ declare module '$env/static/private' {
 	export const UWSM_FINALIZE_VARNAMES: string;
 	export const GUM_CONFIRM_UNSELECTED_FOREGROUND: string;
 	export const GUM_CONFIRM_UNSELECTED_BACKGROUND: string;
-	export const GIO_LAUNCHED_DESKTOP_FILE_PID: string;
 	export const npm_node_execpath: string;
-	export const GIO_LAUNCHED_DESKTOP_FILE: string;
-	export const CHROME_VERSION_EXTRA: string;
 	export const GOPATH: string;
 	export const GUM_CONFIRM_SELECTED_FOREGROUND: string;
 	export const HYPRCURSOR_SIZE: string;
@@ -306,7 +298,6 @@ declare module '$env/dynamic/private' {
 		__MISE_DIFF: string;
 		GIT_ASKPASS: string;
 		XDG_SEAT_PATH: string;
-		INVOCATION_ID: string;
 		MANAGERPID: string;
 		GOROOT: string;
 		BAT_THEME: string;
@@ -327,7 +318,6 @@ declare module '$env/dynamic/private' {
 		TERMINFO: string;
 		TERM: string;
 		npm_package_name: string;
-		CHROME_WRAPPER: string;
 		USER: string;
 		SDL_VIDEODRIVER: string;
 		SUDO_EDITOR: string;
@@ -340,7 +330,6 @@ declare module '$env/dynamic/private' {
 		SHLVL: string;
 		MOZ_ENABLE_WAYLAND: string;
 		GOENV_ROOT: string;
-		INSIDE_NAUTILUS_PYTHON: string;
 		QT_IM_MODULE: string;
 		XDG_VTNR: string;
 		XDG_SESSION_ID: string;
@@ -354,9 +343,7 @@ declare module '$env/dynamic/private' {
 		npm_package_json: string;
 		DOCKER_HOST: string;
 		BUN_INSTALL: string;
-		MM_NOTTTY: string;
 		VSCODE_GIT_ASKPASS_MAIN: string;
-		JOURNAL_STREAM: string;
 		MISE_SHELL: string;
 		XDG_DATA_DIRS: string;
 		GDK_BACKEND: string;
@@ -369,10 +356,7 @@ declare module '$env/dynamic/private' {
 		UWSM_FINALIZE_VARNAMES: string;
 		GUM_CONFIRM_UNSELECTED_FOREGROUND: string;
 		GUM_CONFIRM_UNSELECTED_BACKGROUND: string;
-		GIO_LAUNCHED_DESKTOP_FILE_PID: string;
 		npm_node_execpath: string;
-		GIO_LAUNCHED_DESKTOP_FILE: string;
-		CHROME_VERSION_EXTRA: string;
 		GOPATH: string;
 		GUM_CONFIRM_SELECTED_FOREGROUND: string;
 		HYPRCURSOR_SIZE: string;

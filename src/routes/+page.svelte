@@ -3,6 +3,10 @@
   import SportQuiz from "@/lib/components/SportQuiz.svelte";
 </script>
 
+<svelte:head>
+  <title>Find a new sport nearby</title>
+</svelte:head>
+
 <div class="min-h-screen bg-background">
   <HeroSection />
 
