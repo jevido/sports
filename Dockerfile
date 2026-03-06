@@ -14,7 +14,7 @@ ENV NODE_ENV=production
 ENV PORT=3000
 ENV SQLITE_PATH=/app/data/sports.sqlite
 
-RUN mkdir -p /app/data
+RUN mkdir -p /app/data && chown -R bun:bun /app/data
 
 COPY --from=builder --chown=bun:bun /app/build ./build
 COPY --from=builder --chown=bun:bun /app/node_modules ./node_modules
