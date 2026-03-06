@@ -1,7 +1,7 @@
 FROM oven/bun:1.3.8 AS builder
 WORKDIR /app
 
-COPY package.json bun.lock ./
+COPY package.json bun.lock .
 RUN bun install --frozen-lockfile
 
 COPY . .
@@ -12,9 +12,16 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 ENV PORT=3000
+ENV SQLITE_PATH=/app/data/sports.sqlite
 
-COPY --from=builder /app/build ./build
-COPY --from=builder /app/server.js ./server.js
+RUN mkdir -p /app/data
+
+COPY --from=builder --chown=bun:bun /app/build ./build
+COPY --from=builder --chown=bun:bun /app/node_modules ./node_modules
+COPY --from=builder --chown=bun:bun /app/package.json ./package.json
+
+USER bun
+VOLUME ["/app/data"]
 
 EXPOSE 3000
-CMD ["bun", "server.js"]
+CMD ["bun", "build/index.js"]

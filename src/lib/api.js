@@ -5,13 +5,7 @@ function normalizeBase(base) {
 }
 
 export function getApiBase() {
-  if (rawApiBase) return normalizeBase(rawApiBase);
-
-  if (typeof window !== "undefined" && window.location.port === "8080") {
-    return "http://127.0.0.1:3001";
-  }
-
-  return "";
+  return rawApiBase ? normalizeBase(rawApiBase) : "";
 }
 
 export function apiUrl(path) {

@@ -7,7 +7,10 @@
   let adminToken = "";
   let sportSubmissions = [];
   let clubSubmissions = [];
+  let managedProfiles = [];
+  let managedClubs = [];
   let loading = false;
+  let loadingManage = false;
   let error = "";
   let info = "";
 
@@ -20,6 +23,12 @@
       }
     ])
   );
+
+  const withProfileKeys = (profiles) =>
+    profiles.map((profile) => ({
+      ...profile,
+      profileKey: profile.profileKey || profile.sportName
+    }));
 
   const fetchPending = async () => {
     error = "";
@@ -58,6 +67,46 @@
       clubSubmissions = [];
     } finally {
       loading = false;
+    }
+  };
+
+  const fetchManaged = async () => {
+    error = "";
+    info = "";
+    if (!adminToken.trim()) {
+      error = "Enter admin token.";
+      return;
+    }
+
+    loadingManage = true;
+    try {
+      const profileResponse = await apiFetch("/api/admin/sport-profiles", {
+        headers: { "x-admin-token": adminToken }
+      });
+      const profilePayload = await profileResponse.json();
+      if (!profileResponse.ok) {
+        error = profilePayload?.error || "Failed to fetch managed sport profiles.";
+        managedProfiles = [];
+        return;
+      }
+      managedProfiles = withProfileKeys(profilePayload?.profiles || []);
+
+      const clubResponse = await apiFetch("/api/admin/sport-clubs", {
+        headers: { "x-admin-token": adminToken }
+      });
+      const clubPayload = await clubResponse.json();
+      if (!clubResponse.ok) {
+        error = clubPayload?.error || "Failed to fetch managed clubs.";
+        managedClubs = [];
+        return;
+      }
+      managedClubs = clubPayload?.clubs || [];
+    } catch {
+      error = "Network error while loading managed data.";
+      managedProfiles = [];
+      managedClubs = [];
+    } finally {
+      loadingManage = false;
     }
   };
 
@@ -109,6 +158,133 @@
     }
   };
 
+  const updateProfileField = (index, key, value) => {
+    managedProfiles = managedProfiles.map((profile, currentIndex) =>
+      currentIndex === index ? { ...profile, [key]: value } : profile
+    );
+  };
+
+  const updateProfileAnswerField = (index, questionId, value) => {
+    managedProfiles = managedProfiles.map((profile, currentIndex) =>
+      currentIndex === index
+        ? {
+          ...profile,
+          recommendedAnswers: { ...(profile.recommendedAnswers || {}), [questionId]: value }
+        }
+        : profile
+    );
+  };
+
+  const saveProfile = async (profile) => {
+    error = "";
+    info = "";
+    try {
+      const response = await apiFetch(`/api/admin/sport-profiles/${encodeURIComponent(profile.profileKey)}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          "x-admin-token": adminToken
+        },
+        body: JSON.stringify({
+          sportName: profile.sportName,
+          description: profile.description || "",
+          difficulty: profile.difficulty,
+          recommendedAnswers: profile.recommendedAnswers
+        })
+      });
+      const payload = await response.json();
+      if (!response.ok) {
+        error = payload?.error || "Failed to save sport profile.";
+        return;
+      }
+      managedProfiles = withProfileKeys(payload?.profiles || managedProfiles);
+      info = "Sport profile updated.";
+    } catch {
+      error = "Network error while saving sport profile.";
+    }
+  };
+
+  const deleteProfile = async (profile) => {
+    error = "";
+    info = "";
+    try {
+      const response = await apiFetch(`/api/admin/sport-profiles/${encodeURIComponent(profile.profileKey)}`, {
+        method: "DELETE",
+        headers: {
+          "x-admin-token": adminToken
+        }
+      });
+      const payload = await response.json();
+      if (!response.ok) {
+        error = payload?.error || "Failed to delete sport profile.";
+        return;
+      }
+      managedProfiles = withProfileKeys(payload?.profiles || []);
+      managedClubs = payload?.clubs || managedClubs;
+      info = "Sport profile deleted.";
+    } catch {
+      error = "Network error while deleting sport profile.";
+    }
+  };
+
+  const updateClubField = (index, key, value) => {
+    managedClubs = managedClubs.map((club, currentIndex) =>
+      currentIndex === index ? { ...club, [key]: value } : club
+    );
+  };
+
+  const saveClub = async (club) => {
+    error = "";
+    info = "";
+    try {
+      const response = await apiFetch(`/api/admin/sport-clubs/${club.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          "x-admin-token": adminToken
+        },
+        body: JSON.stringify({
+          sportName: club.sportName,
+          clubName: club.clubName,
+          location: club.location,
+          distance: club.distance || "",
+          time: club.time || ""
+        })
+      });
+      const payload = await response.json();
+      if (!response.ok) {
+        error = payload?.error || "Failed to save club.";
+        return;
+      }
+      managedClubs = payload?.clubs || managedClubs;
+      info = "Club updated.";
+    } catch {
+      error = "Network error while saving club.";
+    }
+  };
+
+  const deleteClub = async (clubId) => {
+    error = "";
+    info = "";
+    try {
+      const response = await apiFetch(`/api/admin/sport-clubs/${clubId}`, {
+        method: "DELETE",
+        headers: {
+          "x-admin-token": adminToken
+        }
+      });
+      const payload = await response.json();
+      if (!response.ok) {
+        error = payload?.error || "Failed to delete club.";
+        return;
+      }
+      managedClubs = payload?.clubs || [];
+      info = "Club deleted.";
+    } catch {
+      error = "Network error while deleting club.";
+    }
+  };
+
   onMount(() => {
     const stored = localStorage.getItem("sports_admin_token");
     if (stored) adminToken = stored;
@@ -144,6 +320,9 @@
         />
         <Button variant="hero" onclick={fetchPending} disabled={loading}>
           {loading ? "Loading..." : "Load pending"}
+        </Button>
+        <Button variant="ghost" onclick={fetchManaged} disabled={loadingManage}>
+          {loadingManage ? "Loading..." : "Load managed"}
         </Button>
       </div>
       {#if error}
@@ -215,6 +394,134 @@
             <div class="flex gap-3">
               <Button variant="accept" onclick={() => reviewClub(club.id, "approve")}>Approve</Button>
               <Button variant="reject" onclick={() => reviewClub(club.id, "reject")}>Reject</Button>
+            </div>
+          </article>
+        {/each}
+      {/if}
+
+      <h2 class="text-2xl font-black tracking-tight mt-8">Manage Approved Sports</h2>
+      {#if managedProfiles.length === 0 && !loadingManage}
+        <div class="bg-card border border-border rounded-2xl p-6 text-muted-foreground">
+          No approved sport profiles loaded.
+        </div>
+      {:else}
+        {#each managedProfiles as profile, profileIndex}
+          <article class="bg-card border border-border rounded-2xl p-6 space-y-4">
+            <div class="grid gap-4 sm:grid-cols-3">
+              <div class="space-y-2 sm:col-span-2">
+                <label class="block text-xs font-semibold uppercase tracking-wide text-muted-foreground">Sport name</label>
+                <input
+                  class="w-full rounded-lg border border-border bg-background px-3 py-2"
+                  value={profile.sportName}
+                  oninput={(event) => updateProfileField(profileIndex, "sportName", event.currentTarget.value)}
+                />
+              </div>
+              <div class="space-y-2">
+                <label class="block text-xs font-semibold uppercase tracking-wide text-muted-foreground">Difficulty</label>
+                <select
+                  class="w-full rounded-lg border border-border bg-background px-3 py-2"
+                  value={profile.difficulty}
+                  onchange={(event) => updateProfileField(profileIndex, "difficulty", event.currentTarget.value)}
+                >
+                  <option value="Beginner">Beginner</option>
+                  <option value="Intermediate">Intermediate</option>
+                  <option value="Advanced">Advanced</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <label class="block text-xs font-semibold uppercase tracking-wide text-muted-foreground">Description</label>
+              <textarea
+                class="w-full rounded-lg border border-border bg-background px-3 py-2 min-h-20"
+                value={profile.description || ""}
+                oninput={(event) => updateProfileField(profileIndex, "description", event.currentTarget.value)}
+              ></textarea>
+            </div>
+
+            <div class="grid gap-3 md:grid-cols-2">
+              {#each quizQuestions as question}
+                <div class="space-y-1">
+                  <label class="block text-xs font-semibold uppercase tracking-wide text-muted-foreground">{question.question}</label>
+                  <select
+                    class="w-full rounded-lg border border-border bg-background px-3 py-2"
+                    value={profile.recommendedAnswers?.[question.id]}
+                    onchange={(event) => updateProfileAnswerField(profileIndex, question.id, event.currentTarget.value)}
+                  >
+                    {#each question.options as option}
+                      <option value={option.value}>{option.label}</option>
+                    {/each}
+                  </select>
+                </div>
+              {/each}
+            </div>
+
+            <div class="flex gap-3">
+              <Button variant="accept" onclick={() => saveProfile(profile)}>Save</Button>
+              <Button variant="reject" onclick={() => deleteProfile(profile)}>Delete</Button>
+            </div>
+          </article>
+        {/each}
+      {/if}
+
+      <h2 class="text-2xl font-black tracking-tight mt-8">Manage Approved Clubs</h2>
+      {#if managedClubs.length === 0 && !loadingManage}
+        <div class="bg-card border border-border rounded-2xl p-6 text-muted-foreground">
+          No approved clubs loaded.
+        </div>
+      {:else}
+        {#each managedClubs as club, clubIndex}
+          <article class="bg-card border border-border rounded-2xl p-6 space-y-4">
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div class="space-y-2">
+                <label class="block text-xs font-semibold uppercase tracking-wide text-muted-foreground">Sport</label>
+                <input
+                  class="w-full rounded-lg border border-border bg-background px-3 py-2"
+                  value={club.sportName}
+                  oninput={(event) => updateClubField(clubIndex, "sportName", event.currentTarget.value)}
+                />
+              </div>
+              <div class="space-y-2">
+                <label class="block text-xs font-semibold uppercase tracking-wide text-muted-foreground">Club name</label>
+                <input
+                  class="w-full rounded-lg border border-border bg-background px-3 py-2"
+                  value={club.clubName}
+                  oninput={(event) => updateClubField(clubIndex, "clubName", event.currentTarget.value)}
+                />
+              </div>
+            </div>
+
+            <div class="grid gap-4 sm:grid-cols-3">
+              <div class="space-y-2 sm:col-span-2">
+                <label class="block text-xs font-semibold uppercase tracking-wide text-muted-foreground">Location</label>
+                <input
+                  class="w-full rounded-lg border border-border bg-background px-3 py-2"
+                  value={club.location}
+                  oninput={(event) => updateClubField(clubIndex, "location", event.currentTarget.value)}
+                />
+              </div>
+              <div class="space-y-2">
+                <label class="block text-xs font-semibold uppercase tracking-wide text-muted-foreground">Distance</label>
+                <input
+                  class="w-full rounded-lg border border-border bg-background px-3 py-2"
+                  value={club.distance || ""}
+                  oninput={(event) => updateClubField(clubIndex, "distance", event.currentTarget.value)}
+                />
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <label class="block text-xs font-semibold uppercase tracking-wide text-muted-foreground">Time</label>
+              <input
+                class="w-full rounded-lg border border-border bg-background px-3 py-2"
+                value={club.time || ""}
+                oninput={(event) => updateClubField(clubIndex, "time", event.currentTarget.value)}
+              />
+            </div>
+
+            <div class="flex gap-3">
+              <Button variant="accept" onclick={() => saveClub(club)}>Save</Button>
+              <Button variant="reject" onclick={() => deleteClub(club.id)}>Delete</Button>
             </div>
           </article>
         {/each}

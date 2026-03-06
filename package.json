@@ -4,15 +4,14 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "bash -lc 'PORT=3001 bun --watch server.js & API_PID=$!; trap \"kill $API_PID\" EXIT; vite dev'",
-    "dev:web": "vite dev",
-    "dev:api": "PORT=3001 bun --watch server.js",
+    "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
+    "start": "bun build/index.js",
     "check": "svelte-kit sync && svelte-check"
   },
   "dependencies": {
-    "@sveltejs/adapter-static": "^3.0.8",
+    "@sveltejs/adapter-node": "^5.2.13",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-svelte": "^0.544.0",

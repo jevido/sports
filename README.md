@@ -5,7 +5,7 @@ Sportinder is a Svelte 5 single-page app built with SvelteKit, Tailwind, and sha
 ## Stack
 
 - Bun
-- Svelte 5 + SvelteKit (static SPA output)
+- Svelte 5 + SvelteKit (single server for UI + API)
 - Tailwind CSS
 - shadcn-svelte component conventions
 
@@ -17,21 +17,13 @@ bun run dev
 ```
 
 App runs on `http://localhost:8080` by default.
-The dev command also starts the Bun API server on `http://localhost:3001`.
-Frontend requests go directly to that API in development.
-
-If you prefer separate terminals:
-
-```bash
-bun run dev:api
-bun run dev:web
-```
+Both the app and `/api/*` endpoints run on this same port.
 
 ## Build and preview
 
 ```bash
 bun run build
-bun run preview
+bun run start
 ```
 
 ## Type checks
@@ -51,14 +43,14 @@ docker build -t sportinder:latest .
 Run container:
 
 ```bash
-docker run --rm -p 3000:3000 sportinder:latest
+docker run --rm -p 3000:3000 -v $(pwd)/data:/app/data sportinder:latest
 ```
 
 Then open `http://localhost:3000`.
 
 ## Community Submissions + Moderation
 
-The Bun server now includes a SQLite-backed API:
+The SvelteKit server includes a SQLite-backed API:
 
 - `POST /api/submissions`: public endpoint to submit a sport + matching quiz answers
 - `POST /api/club-submissions`: public endpoint to submit a local club for a sport
@@ -68,6 +60,12 @@ The Bun server now includes a SQLite-backed API:
 - `POST /api/admin/submissions/:id/review`: approve or reject a submission
 - `GET /api/admin/club-submissions?status=pending`: list club submissions for moderation
 - `POST /api/admin/club-submissions/:id/review`: approve or reject a club submission
+- `GET /api/admin/sport-profiles`: list approved sport profiles (manage)
+- `PUT /api/admin/sport-profiles/:sportName`: update approved sport profile
+- `DELETE /api/admin/sport-profiles/:sportName`: delete approved sport profile (+ linked clubs)
+- `GET /api/admin/sport-clubs`: list approved clubs (manage)
+- `PUT /api/admin/sport-clubs/:id`: update approved club
+- `DELETE /api/admin/sport-clubs/:id`: delete approved club
 
 UI routes:
 
@@ -78,8 +76,8 @@ UI routes:
 
 - `ADMIN_TOKEN`: required for admin API access (`x-admin-token` header)
 - `SQLITE_PATH` (optional): path to SQLite database (defaults to `./data/sports.sqlite`)
-- `VITE_API_BASE_URL` (optional): override frontend API base URL (for dev/staging)
-- `CORS_ORIGIN` (optional): set API CORS allow-origin (defaults to `*`)
+- `VITE_API_BASE_URL` (optional): override frontend API base URL (use only when API is on another origin)
+- `CORS_ORIGIN` (optional): CORS allow-origin for cross-origin API calls (defaults to `*`)
 
 ### Scoring rule for community sports
 
